@@ -26,8 +26,8 @@ body {
 #left-side-bar .bar-content .welcome {
   color: var(--secondary-color);
   font-size: 12px;
-  margin-bottom: 18px;
-  margin-left: 44px;
+  margin: 0;
+  padding: 34px 0 18px 44px;
 }
 #left-side-bar .bar-content .bar-button {
   display: flex;
@@ -47,6 +47,7 @@ body {
 }
 .selected {
   background-color: #e6edf3;
+  border-left: 3px solid var(--primary-color);
 }
 .selected svg path {
   fill: var(--primary-color) !important;
