@@ -24,9 +24,14 @@ h4 {
   top: 0px;
   height: 100vh;
 }
-#left-side-bar .nwc-logo {
+#left-side-bar .main-logo {
   width: 100%;
   height: 94px;
+}
+#left-side-bar .light-logo {
+  width: 100%;
+  height: 94px;
+  display: none;
 }
 #left-side-bar .bar-content {
   margin-left: 0px;
@@ -61,6 +66,12 @@ h4 {
 .selected {
   background-color: #e6edf3;
   border-left: 3px solid var(--primary-color);
+}
+.bar-button:hover {
+  background-color: #e9f2fa;
+}
+.selected:hover {
+  background-color: #e6edf3;
 }
 .selected svg path {
   fill: var(--primary-color) !important;
