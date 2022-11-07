@@ -8,6 +8,7 @@ body {
 }
 a,
 p,
+div,
 h1,
 h2,
 h3,
@@ -270,4 +271,28 @@ h4 {
   .info-column .type {
     font-size: 11px;
   }
+}
+/*view incident*/
+.incident-holder {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: calc(100% - 245px);
+}
+.page-name {
+  background-color: #e6edf3;
+  padding: 14px 0 14px 16px;
+  margin: 15px 0;
+}
+.page-name p {
+  margin: 0 0 0 0px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+#incident-name {
+  color: black;
+  background-color: #e5e8ed;
+  padding: 15px 0 15px 52px;
+  font-size: 17px;
+  font-weight: 600;
 }
