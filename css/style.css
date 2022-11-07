@@ -22,7 +22,7 @@ h4 {
   position: fixed;
   left: 0px;
   top: 0px;
-  height: 100vh;
+  height: -webkit-fill-available;
 }
 #left-side-bar .main-logo {
   width: 100%;
@@ -103,13 +103,41 @@ h4 {
   color: #6a707e;
 }
 
+@media (max-width: 800px) {
+  #left-side-bar {
+    width: 90px;
+  }
+  #left-side-bar .main-logo {
+    display: none;
+  }
+  #left-side-bar .light-logo {
+    display: block;
+    height: 75px;
+  }
+  #left-side-bar .bar-content .welcome {
+    font-size: 10px;
+    margin: 0;
+    padding: 34px 0 18px 10px;
+  }
+  #left-side-bar .bar-content .bar-button {
+    padding-left: 0px;
+    justify-content: center;
+  }
+  #left-side-bar .bar-content .bar-button p {
+    display: none;
+  }
+  .log-out {
+    padding: 29px 0 29px 10px;
+  }
+}
+
 /*top-view*/
 .top-view-hoder {
   position: fixed;
   top: 0px;
   right: 0px;
   width: calc(100% - 245px);
-  height: 100vh;
+  height: -webkit-fill-available;
 }
 .page-name {
   background-color: #e6edf3;
@@ -167,4 +195,66 @@ h4 {
   font-size: 20px;
   font-weight: 400;
   color: white;
+}
+@media (max-width: 1373px) {
+  .incident-count-card {
+    width: 300px;
+    padding-left: 18px;
+    margin: 10px 8px;
+  }
+}
+@media (max-width: 1253px) {
+  .incident-count-card {
+    width: 250px;
+    padding-left: 8px;
+    margin: 10px 8px;
+  }
+  .incident-count-card img {
+    width: 30px;
+  }
+  .info-column .number {
+    font-size: 28px;
+  }
+  .info-column .type {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1073px) {
+  .incident-count-card {
+    width: 200px;
+    padding-left: 8px;
+    margin: 10px 6px;
+  }
+  .info-column .type {
+    font-size: 13px;
+  }
+}
+@media (max-width: 911px) {
+  .incident-count-card {
+    width: 150px;
+    padding-left: 8px;
+    margin: 10px 6px;
+  }
+  .info-column .number {
+    font-size: 20px;
+  }
+  .info-column .type {
+    font-size: 11px;
+  }
+}
+@media (max-width: 800px) {
+  .top-view-hoder {
+    width: calc(100% - 90px);
+  }
+  .incident-count-card {
+    width: 200px;
+    padding-left: 8px;
+    margin: 10px 6px;
+  }
+  .info-column .number {
+    font-size: 28px;
+  }
+  .info-column .type {
+    font-size: 13px;
+  }
 }
