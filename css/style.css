@@ -69,9 +69,11 @@ h4 {
 }
 .bar-button:hover {
   background-color: #e9f2fa;
+  border-left: 3px solid #83929e;
 }
 .selected:hover {
   background-color: #e6edf3;
+  border-color: var(--primary-color);
 }
 .selected svg path {
   fill: var(--primary-color) !important;
@@ -91,6 +93,10 @@ h4 {
   padding: 29px 0 29px 44px;
   border-top: 1px solid #e5e7e8;
 }
+.log-out:hover {
+  cursor: pointer;
+}
+
 .log-out p {
   margin: 0 0 0 15px;
   font-size: 12px;
