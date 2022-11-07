@@ -258,3 +258,16 @@ h4 {
     font-size: 13px;
   }
 }
+@media (max-width: 340px) {
+  .incident-count-card {
+    width: 150px;
+    padding-left: 8px;
+    margin: 10px 6px;
+  }
+  .info-column .number {
+    font-size: 20px;
+  }
+  .info-column .type {
+    font-size: 11px;
+  }
+}
