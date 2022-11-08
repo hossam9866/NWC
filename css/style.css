@@ -69,8 +69,7 @@ h4 {
   border-left: 3px solid var(--primary-color);
 }
 .bar-button:hover {
-  background-color: #e9f2fa;
-  border-left: 3px solid #83929e;
+  background-color: rgba(0, 0, 0, 0.034);
 }
 .selected:hover {
   background-color: #e6edf3;
@@ -375,7 +374,7 @@ h4 {
   font-size: 14px;
   font-weight: 400;
 }
-#node-modified-date {
+#note-modified-date {
   margin-left: 20px;
   font-size: 14px;
   font-weight: 400;

@@ -20,17 +20,8 @@ window.onload = () => {
   request.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       let data = JSON.parse(this.responseText);
-      document.getElementById("incident-name").innerText = data["title"];
-      document.getElementById("for").innerText = data["for"];
-      document.getElementById("state").innerText = data["state"];
-      document.getElementById("level").innerText = data["level"];
-      document.getElementById("asset-type").innerText = data["asset_type"];
-      document.getElementById("service-type").innerText = data["service_type"];
-      document.getElementById("control-room").innerText = data["control_room"];
-      document.getElementById("summary").innerText = data["summary"];
-      document.getElementById("expected-end").innerText = data["expected_end"];
-      document.getElementById("last-updated").innerText = data["last_updated"];
-      document.getElementById("status").innerText = data["status"];
+      setElementsData(data);
+      setImpactedSites(data["impacted_region"]);
     }
   };
   request.onload = function () {
@@ -44,4 +35,49 @@ window.onload = () => {
       ).innerHTML = `403 Not alloweed to view this incident`;
     }
   };
+
+  function setElementsData(data) {
+    document.getElementById("incident-name").innerText = data["title"];
+    document.getElementById("for").innerText = data["for"];
+    document.getElementById("state").innerText = data["state"];
+    document.getElementById("level").innerText = data["level"];
+    document.getElementById("asset-type").innerText = data["asset_type"];
+    document.getElementById("service-type").innerText = data["service_type"];
+    document.getElementById("control-room").innerText = data["control_room"];
+    document.getElementById("summary").innerText = data["summary"];
+    document.getElementById("expected-end").innerHTML = `${
+      data["expected_end"]
+    } <span>${"28D 5H"}</span>`;
+    document.getElementById("last-updated").innerText = data["last_updated"];
+    document.getElementById("status").innerText = data["status"];
+    document.getElementById("require-media").innerText = data[
+      "requires_media_reelease"
+    ]
+      ? "Yes"
+      : "No";
+    document.getElementById("require-support").innerText = data[
+      "requires_main_support_center"
+    ]
+      ? "Yes"
+      : "No";
+    document.getElementById("note-modified-date").innerText =
+      data["note_modified"];
+    document.getElementById("note-value").innerText = data["note"];
+  }
+  function setImpactedSites(data) {
+    let sitesElement = document.querySelector(".sites");
+    for (let i = 0; i < data.length; i++) {
+      let newElement = document.createElement("div");
+      newElement.classList.add("site-row");
+      let regionElement = document.createElement("div");
+      regionElement.classList.add("region");
+      regionElement.innerText = data[i]["region"];
+      let nameElement = document.createElement("div");
+      nameElement.classList.add("name");
+      nameElement.innerText = data[i]["name"];
+      newElement.appendChild(regionElement);
+      newElement.appendChild(nameElement);
+      sitesElement.appendChild(newElement);
+    }
+  }
 };
