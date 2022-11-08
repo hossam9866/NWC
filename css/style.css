@@ -274,7 +274,7 @@ h4 {
 }
 /*view incident*/
 .incident-holder {
-  position: fixed;
+  position: absolute;
   top: 0px;
   right: 0px;
   width: calc(100% - 245px);
@@ -303,7 +303,7 @@ h4 {
 .incident-details {
   background-color: white;
   padding: 20px 0px 20px 70px;
-  box-shadow: 0.47px 2.96px #7777771a;
+  box-shadow: 1.47px 2.96px #bdbdbd1a;
   margin: 25px 40px;
 }
 .info-row {
@@ -318,10 +318,37 @@ h4 {
   color: var(--primary-color);
   font-size: 14px;
   font-weight: 400;
+  width: 200px;
+  min-width: 200px;
 }
 .info-value {
-  position: absolute;
-  left: 200px;
   color: #6a707e;
   font-size: 14px;
+}
+.info-row span {
+  color: #ff5252;
+}
+.question {
+  min-width: none;
+  width: auto;
+  margin-right: 20px;
+}
+.sites {
+  box-shadow: 1.47px 2.96px #bdbdbd1a;
+  margin: 25px 40px;
+}
+.site-row {
+  background-color: white;
+  padding: 30px 0 30px 21px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  font-size: 14px;
+  color: #6a707e;
+  margin: 10px 0;
+}
+.site-row .region {
+  min-width: 150px;
+  width: 150px;
 }
