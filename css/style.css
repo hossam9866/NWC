@@ -329,7 +329,7 @@ h4 {
   color: #ff5252;
 }
 .question {
-  min-width: none;
+  min-width: auto;
   width: auto;
   margin-right: 10px;
 }
@@ -351,4 +351,34 @@ h4 {
 .site-row .region {
   min-width: 150px;
   width: 150px;
+}
+@media (max-width: 800px) {
+  .incident-details {
+    background-color: white;
+    padding: 5px 5px 5px 20px;
+    box-shadow: 1.47px 2.96px #bdbdbd1a;
+    margin: 25px 40px;
+  }
+  .incident-holder {
+    width: calc(100% - 90px);
+  }
+  .info-name {
+    font-size: 11px;
+    width: 130px;
+    min-width: 130px;
+  }
+  .info-value {
+    font-size: 11px;
+  }
+}
+@media (max-width: 500px) {
+  .info-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-name {
+    min-width: auto;
+    width: auto;
+  }
 }
