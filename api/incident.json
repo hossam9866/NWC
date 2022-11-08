@@ -23,7 +23,7 @@
       "region": "Gadah"
     }
   ],
-  "control_room": 4,
+  "control_room": "North ",
   "summary": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non officiis dignissimos doloremque! Nam quaerat cumque dignissimos similique dicta repellendus modi. Fugit delectus in aliquam excepturi nesciunt nam, ex reiciendis. Dolore!",
   "expected_end": "2021-01-02 15:55:00",
   "status": "open",

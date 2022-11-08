@@ -279,6 +279,14 @@ h4 {
   right: 0px;
   width: calc(100% - 245px);
 }
+.error-message {
+  color: red;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #b8b9bb;
+  text-align: center;
+  margin-top: 20px;
+}
 #view-incident {
   background-color: #f3f6f9;
   padding: 45px 0;
