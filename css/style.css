@@ -335,7 +335,7 @@ h4 {
 }
 .sites {
   box-shadow: 1.47px 2.96px #bdbdbd1a;
-  margin: 25px 40px;
+  margin: 25px 40px 0 40px;
 }
 .site-row {
   background-color: white;
