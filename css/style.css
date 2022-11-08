@@ -352,6 +352,33 @@ h4 {
   min-width: 150px;
   width: 150px;
 }
+.note {
+  box-shadow: 1.47px 2.96px #bdbdbd1a;
+  background-color: white;
+  margin: 25px 40px 0 40px;
+  padding: 30px 0 30px 21px;
+}
+.note .scetion-name {
+  color: var(--primary-color);
+  font-weight: 400;
+}
+.note .note-date .name {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+#node-modified-date {
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6a707e;
+}
+#note-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6a707e;
+  margin-top: 14px;
+}
 @media (max-width: 800px) {
   .incident-details {
     background-color: white;
