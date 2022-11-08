@@ -1,0 +1,145 @@
+//Test URL: https://app.simplycast.ca/?q=lp/show&lp=uoAlert
+// You can visit this uRL with the netpanel open in chrome/edge/firefox and see what the returns look like
+
+$.ajax({
+    //app.simplycast.ca is our Canadian Data Center SaaS product - you can make relative requests to api/.../...
+    // This is a query to get the most recently created incident in this sample use case, the query can be omitted in most of the NWC use cases.
+    url: "https://app.simplycast.ca/api/customData/entity/9/management/instance?offset=0&limit=1&sortField=dateCreated&sortOrder=DESC&query=((`37` = \"4\"))",
+    type: 'GET',
+    //The header is only for this external Sample - this is not required for internal API Calls for our project - in the widgets we can just make the direct call to the application url
+    headers:{
+        "Authorization" :"MjZjNTM3MjQyNjdjNGRiMDZmNmE1OGJmNGU0NzMzMzZlZDExNjJhNDplMGJjN2Y4YjdmMWE3ZTZkNTM3ZGJkYjhhNTMwMTgzYTQ1OGExNTBm"
+    }
+}).done(function(data, second, third) {
+    //The value of ENUMS is also available via API, they are hard coded here for convience.
+    var enums = {
+        "4": "Active",
+        "5": "Closed",
+        "9": "Campus Exemple | Example Campus",
+        "10": "Campus Autre | Other Campus",
+        "11": "Pavillion Faux | Fake Hall",
+        "12": "Édifice Test | Test Building",
+        "13": "Place d’échantillon | Sample Place",
+        "14": "S’abriter sur Place | Shelter in Place",
+        "15": "Evacuer | Evacuate",
+        "16": "Sécurisé et attendre | Hold and Secure"
+    };
+
+    var values = data.instances[0].values;
+    Object.keys(values).forEach(function (key) {
+        if(enums[values[key]] !== undefined) {
+            values[key] = enums[values[key]];
+        }
+    });
+
+    //My {very rough, simple} replacement code for this page.
+    var replace = {
+        "SHORT":33,
+        "ACTION":36,
+        "BUILDING":43,
+        "CAMPUS":42,
+        "fr_description":39,
+        "en_description":38
+    };
+
+    Object.keys(replace).forEach(function (key) {
+        $('#'+key).html(values[replace[key]]);
+    });
+
+    if (values[36] == "S’abriter sur Place | Shelter in Place") {
+        $('#SIP1').css("display","block");
+        $('#SIP2').css("display","block");
+    }
+    if (values[36] == "Sécurisé et attendre | Hold and Secure") {
+        $('#HAS1').css("display","block");
+        $('#HAS2').css("display","block");
+    }
+    $('#main').css("display","block");
+    $('#loading').css("display","none");
+
+}).fail(function(jqXHR, textStatus, errorThrown){
+    console.log(jqXHR);
+    console.log(textStatus);
+    console.log(errorThrown);
+});
+
+
+
+//ONly going to show the most recent result
+
+
+
+
+//Field ID's
+/* 
+{
+  "33": {
+    "id": "33",
+    "entityId": "9",
+    "name": "Subject",
+    },
+  "36": {
+    "id": "36",
+    "entityId": "9",
+    "name": "Incident Action",
+    "dataType": "enum",
+    "enumId": 6,
+   },
+  "37": {
+    "id": "37",
+    "entityId": "9",
+    "name": "Status",
+    "dataType": "enum",
+    "enumId": 2,
+   },
+  "38": {
+    "id": "38",
+    "entityId": "9",
+    "name": "English Description",
+   },
+  "39": {
+    "id": "39",
+  },
+  "40": {
+    "id": "40",
+    "entityId": "9",
+    "name": "Send De-Activate",
+  },
+  "41": {
+    "id": "41",
+    "entityId": "9",
+    "name": "Short Description",
+   },
+  "42": {
+    "id": "42",
+    "entityId": "9",
+    "name": "Campus",
+    "dataType": "enum",
+    "enumId": 4,
+   "43": {
+    "id": "43",
+    "entityId": "9",
+    "name": "Building",
+    "dataType": "enum",
+     "enumId": 5,
+}
+{
+  "2": { Status
+    "4": "Active",
+    "5": "Closed"
+  },
+  "4": { Campus
+    "9": "Campus Exemple | Example Campus",
+    "10": "Campus Autre | Other Campus"
+  },
+  "5": { Building
+    "11": "Pavillion Faux | Fake Hall",
+    "12": "Édifice Test | Test Building",
+    "13": "Place d’échantillon | Sample Place"
+  },
+  "6": { 
+    "14": "S’abriter sur Place | Shelter in Place",
+    "15": "Evacuer | Evacuate",
+    "16": "Sécurisé et attendre | Hold and Secure"
+  }
+}

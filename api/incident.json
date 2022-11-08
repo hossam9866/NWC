@@ -4,7 +4,7 @@
   "for": "Produce",
   "level": 1,
   "state": "emergency",
-  "asset_typee": "station",
+  "asset_type": "station",
   "service_type": "water",
   "impacted_region": [
     {
