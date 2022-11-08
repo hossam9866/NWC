@@ -1,0 +1,35 @@
+{
+  "id": "1",
+  "title": "North Riyadh Tank",
+  "for": "Produce",
+  "level": 1,
+  "state": "emergency",
+  "asset_typee": "station",
+  "service_type": "water",
+  "impacted_region": [
+    {
+      "id": "1",
+      "name": "Police Station",
+      "region": "Gadah"
+    },
+    {
+      "id": "1",
+      "name": "EEmbassy",
+      "region": "Gadah"
+    },
+    {
+      "id": "1",
+      "name": "Army Point",
+      "region": "Gadah"
+    }
+  ],
+  "control_room": 4,
+  "summary": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non officiis dignissimos doloremque! Nam quaerat cumque dignissimos similique dicta repellendus modi. Fugit delectus in aliquam excepturi nesciunt nam, ex reiciendis. Dolore!",
+  "expected_end": "2021-01-02 15:55:00",
+  "status": "open",
+  "requires_media_reelease": true,
+  "requires_main_support_center": false,
+  "last_updated": "2021-01-02 15:55:00",
+  "note": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non officiis dignissimos doloremque!",
+  "note_modified": "2021-01-02 15:55:00"
+}
