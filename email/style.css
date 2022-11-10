@@ -1,0 +1,186 @@
+:root {
+  --primary-color: #06538c;
+  --secondary-color: #aaaaaa;
+  --gradient: linear-gradient(to bottom, #06538c, #598db2);
+}
+body {
+  margin: 0;
+}
+a,
+p,
+div,
+h1,
+h2,
+h3,
+h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nwc-email {
+  background-color: #f3f6f9;
+}
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: white;
+  padding-bottom: 40px;
+}
+.logo img {
+  width: 500px;
+  margin: 20px 40px 0 0;
+}
+.level {
+  margin: 0px 0 40px 0;
+  padding: 14px 0;
+}
+.level-1 {
+  background-color: #2399a5;
+}
+.level-2 {
+  background-color: #569918;
+}
+.level-3 {
+  background-color: #e2ae00;
+}
+.level-4 {
+  background-color: #f86307;
+}
+.level-5 {
+  background-color: #d42f1c;
+}
+.level h2 {
+  text-transform: capitalize;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  margin: 0;
+}
+.level p {
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  margin: 4px 0;
+  font-weight: 400;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 110px;
+}
+.description-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0;
+}
+.description-row p {
+  margin: 0;
+}
+.description-row .name {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin: 0 15px 0 0;
+  width: 155px;
+}
+.description-row .value {
+  font-size: 20px;
+  color: #707070;
+  text-transform: capitalize;
+}
+.summary {
+  padding: 40px 80px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 5px -5px #bebebe14;
+}
+.summary h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+}
+.summary p {
+  text-align: center;
+  color: #707070;
+  font-size: 20px;
+  margin: 12px 0 0 0;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#recived-button {
+  font-size: 35px;
+  color: white;
+  text-align: center;
+  background-color: var(--primary-color);
+  margin-bottom: 40px;
+  font-weight: 400;
+  padding: 11px 50px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .logo img {
+    width: 50%;
+  }
+  .description {
+    margin-left: 70px;
+  }
+}
+@media (max-width: 700px) {
+  .description {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .logo img {
+    width: 270px;
+  }
+  .summary {
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 500px) {
+  .logo img {
+    width: 200px;
+  }
+  .summary {
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 423px) {
+  .logo img {
+    width: 180px;
+  }
+  .description-row .name {
+    font-size: 15px;
+    width: 120px;
+  }
+  .description-row .value {
+    font-size: 15px;
+  }
+  .summary {
+    padding: 40px 10px;
+  }
+  .summary h2 {
+    font-size: 25px;
+  }
+  .summary p {
+    font-size: 17px;
+  }
+  #recived-button {
+    font-size: 28px;
+  }
+}

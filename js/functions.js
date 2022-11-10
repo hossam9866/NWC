@@ -19,13 +19,14 @@ window.onload = () => {
   request.send();
   request.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
-      let data = JSON.parse(this.responseText);
-      setElementsData(data);
-      setImpactedSites(data["impacted_region"]);
     }
   };
   request.onload = function () {
-    if (this.status === 404) {
+    if (this.status === 200) {
+      let data = JSON.parse(this.responseText);
+      setElementsData(data);
+      setImpactedSites(data["impacted_region"]);
+    } else if (this.status === 404) {
       document.querySelector(
         ".error-message"
       ).innerHTML = `404 Incident not found`;
