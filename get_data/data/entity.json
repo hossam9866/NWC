@@ -1,0 +1,795 @@
+{
+  "entity": {
+    "id": "5",
+    "login": "11",
+    "name": "BP-001 Incident",
+    "description": "NWC Incidents",
+    "deleted": 0,
+    "dateCreated": "2022-11-07T19:58:57+00:00",
+    "dateModified": "2022-11-11T16:01:36+00:00",
+    "fields": {
+      "17": {
+        "id": "17",
+        "entityId": "5",
+        "name": "Title",
+        "dataType": "string",
+        "attribute": "name",
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["TITLE", "NAME"]
+      },
+      "19": {
+        "id": "19",
+        "entityId": "5",
+        "name": "Incident State",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 3,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": 5,
+        "sortable": true,
+        "mergeTags": ["STATE"]
+      },
+      "21": {
+        "id": "21",
+        "entityId": "5",
+        "name": "Incident For",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 5,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["INCIDENT IMPACT"]
+      },
+      "23": {
+        "id": "23",
+        "entityId": "5",
+        "name": "Level",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 7,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": 17,
+        "sortable": true,
+        "mergeTags": []
+      },
+      "25": {
+        "id": "25",
+        "entityId": "5",
+        "name": "Service Type",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 9,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": []
+      },
+      "27": {
+        "id": "27",
+        "entityId": "5",
+        "name": "Wastewater Type",
+        "dataType": "enumMultiValue",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 13,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": [],
+        "sortable": false,
+        "mergeTags": ["WASTEWATER TYPE"]
+      },
+      "29": {
+        "id": "29",
+        "entityId": "5",
+        "name": "Water Type",
+        "dataType": "enumMultiValue",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 11,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": [],
+        "sortable": false,
+        "mergeTags": ["WATER TYPE"]
+      },
+      "33": {
+        "id": "33",
+        "entityId": "5",
+        "name": "Cluster",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 15,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["CLUSTER"]
+      },
+      "35": {
+        "id": "35",
+        "entityId": "5",
+        "name": "Description",
+        "dataType": "text",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["SUMMARY", "DESCRIPTION"]
+      },
+      "37": {
+        "id": "37",
+        "entityId": "5",
+        "name": "Incident Start Date",
+        "dataType": "date",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["INCIDENT START"]
+      },
+      "39": {
+        "id": "39",
+        "entityId": "5",
+        "name": "Expected End Date",
+        "dataType": "date",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["EXPECTED END"]
+      },
+      "41": {
+        "id": "41",
+        "entityId": "5",
+        "name": "Requires media release",
+        "dataType": "bool",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["MEDIA RELEASE"]
+      },
+      "43": {
+        "id": "43",
+        "entityId": "5",
+        "name": "Status",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 17,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": 57,
+        "sortable": true,
+        "mergeTags": ["STATUS"]
+      },
+      "47": {
+        "id": "47",
+        "entityId": "5",
+        "name": "last updated",
+        "dataType": "date",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["LAST UPDATE"]
+      },
+      "57": {
+        "id": "57",
+        "entityId": "5",
+        "name": "VIP Customer(s) Impacted",
+        "dataType": "text",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["VIP"]
+      },
+      "61": {
+        "id": "61",
+        "entityId": "5",
+        "name": "Actions Taken",
+        "dataType": "text",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["ACTIONS TAKEN"]
+      },
+      "63": {
+        "id": "63",
+        "entityId": "5",
+        "name": "Areas Impacted",
+        "dataType": "text",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["AREA IMPACT"]
+      },
+      "65": {
+        "id": "65",
+        "entityId": "5",
+        "name": "Support from CDC required",
+        "dataType": "bool",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["CDC SUPPORT"]
+      },
+      "67": {
+        "id": "67",
+        "entityId": "5",
+        "name": "City Business Unit",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 19,
+        "relatedEntityId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 1,
+        "indexed": 1,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["BUSINESS UNIT"]
+      }
+    },
+    "enums": {
+      "3": {
+        "5": "Emergency",
+        "7": "Scheduled"
+      },
+      "5": {
+        "9": "Distribution",
+        "11": "Produce"
+      },
+      "7": {
+        "13": "External",
+        "15": "1",
+        "17": "2",
+        "19": "3",
+        "21": "4",
+        "23": "5"
+      },
+      "9": {
+        "27": "Water",
+        "29": "Wastewater"
+      },
+      "11": {
+        "31": "WTP",
+        "33": "Network",
+        "35": "Technical Issues",
+        "37": "Main Line"
+      },
+      "13": {
+        "39": "Maineline",
+        "41": "Network",
+        "43": "WTP",
+        "63": "Technical Issue",
+        "65": "Flood Points - Environmental Services",
+        "67": "STP Operational Status"
+      },
+      "15": {
+        "45": "HQ",
+        "47": "Central Cluster",
+        "49": "Western Cluster",
+        "51": "Eastern Cluster",
+        "53": "Northern Cluster",
+        "55": "North Western Cluster",
+        "61": "Southern Cluster"
+      },
+      "17": {
+        "57": "Open",
+        "59": "Closed"
+      },
+      "19": {
+        "69": "Crisis Disaster Center",
+        "71": "Riyadh Business Unit",
+        "73": "Northern Cities Business Unit",
+        "75": "Southern Cities Business Unit",
+        "77": "Western Cities Business Unit",
+        "79": "Jeddah Business Unit",
+        "81": "Makkah Business Unit",
+        "83": "Taif Business Unit",
+        "85": "Al-Mashair Business Unit",
+        "87": "Dammam",
+        "89": "Al-Qassim",
+        "91": "Hail",
+        "93": "Northern borders",
+        "95": "Al Jouf",
+        "97": "Medina",
+        "99": "Tabuk",
+        "101": "Assir",
+        "103": "Al Baha",
+        "105": "Jazan",
+        "107": "Najran"
+      }
+    },
+    "enumOptions": {
+      "3": [
+        {
+          "id": 5,
+          "name": "Emergency"
+        },
+        {
+          "id": 7,
+          "name": "Scheduled"
+        }
+      ],
+      "5": [
+        {
+          "id": 9,
+          "name": "Distribution"
+        },
+        {
+          "id": 11,
+          "name": "Produce"
+        }
+      ],
+      "7": [
+        {
+          "id": 13,
+          "name": "External"
+        },
+        {
+          "id": 15,
+          "name": "1"
+        },
+        {
+          "id": 17,
+          "name": "2"
+        },
+        {
+          "id": 19,
+          "name": "3"
+        },
+        {
+          "id": 21,
+          "name": "4"
+        },
+        {
+          "id": 23,
+          "name": "5"
+        }
+      ],
+      "9": [
+        {
+          "id": 27,
+          "name": "Water"
+        },
+        {
+          "id": 29,
+          "name": "Wastewater"
+        }
+      ],
+      "11": [
+        {
+          "id": 31,
+          "name": "WTP"
+        },
+        {
+          "id": 33,
+          "name": "Network"
+        },
+        {
+          "id": 35,
+          "name": "Technical Issues"
+        },
+        {
+          "id": 37,
+          "name": "Main Line"
+        }
+      ],
+      "13": [
+        {
+          "id": 39,
+          "name": "Maineline"
+        },
+        {
+          "id": 41,
+          "name": "Network"
+        },
+        {
+          "id": 43,
+          "name": "WTP"
+        },
+        {
+          "id": 63,
+          "name": "Technical Issue"
+        },
+        {
+          "id": 65,
+          "name": "Flood Points - Environmental Services"
+        },
+        {
+          "id": 67,
+          "name": "STP Operational Status"
+        }
+      ],
+      "15": [
+        {
+          "id": 45,
+          "name": "HQ"
+        },
+        {
+          "id": 47,
+          "name": "Central Cluster"
+        },
+        {
+          "id": 49,
+          "name": "Western Cluster"
+        },
+        {
+          "id": 51,
+          "name": "Eastern Cluster"
+        },
+        {
+          "id": 53,
+          "name": "Northern Cluster"
+        },
+        {
+          "id": 55,
+          "name": "North Western Cluster"
+        },
+        {
+          "id": 61,
+          "name": "Southern Cluster"
+        }
+      ],
+      "17": [
+        {
+          "id": 57,
+          "name": "Open"
+        },
+        {
+          "id": 59,
+          "name": "Closed"
+        }
+      ],
+      "19": [
+        {
+          "id": 69,
+          "name": "Crisis Disaster Center"
+        },
+        {
+          "id": 71,
+          "name": "Riyadh Business Unit"
+        },
+        {
+          "id": 73,
+          "name": "Northern Cities Business Unit"
+        },
+        {
+          "id": 75,
+          "name": "Southern Cities Business Unit"
+        },
+        {
+          "id": 77,
+          "name": "Western Cities Business Unit"
+        },
+        {
+          "id": 79,
+          "name": "Jeddah Business Unit"
+        },
+        {
+          "id": 81,
+          "name": "Makkah Business Unit"
+        },
+        {
+          "id": 83,
+          "name": "Taif Business Unit"
+        },
+        {
+          "id": 85,
+          "name": "Al-Mashair Business Unit"
+        },
+        {
+          "id": 87,
+          "name": "Dammam"
+        },
+        {
+          "id": 89,
+          "name": "Al-Qassim"
+        },
+        {
+          "id": 91,
+          "name": "Hail"
+        },
+        {
+          "id": 93,
+          "name": "Northern borders"
+        },
+        {
+          "id": 95,
+          "name": "Al Jouf"
+        },
+        {
+          "id": 97,
+          "name": "Medina"
+        },
+        {
+          "id": 99,
+          "name": "Tabuk"
+        },
+        {
+          "id": 101,
+          "name": "Assir"
+        },
+        {
+          "id": 103,
+          "name": "Al Baha"
+        },
+        {
+          "id": 105,
+          "name": "Jazan"
+        },
+        {
+          "id": 107,
+          "name": "Najran"
+        }
+      ]
+    },
+    "enumNames": {
+      "3": "Incident State",
+      "5": "Incident Effect on",
+      "7": "Incident Level",
+      "9": "Service Type",
+      "11": "Service - Water Options",
+      "13": "Service - Wastewater Options",
+      "15": "Cluster",
+      "17": "Incident Status",
+      "19": "City Business Unit"
+    },
+    "attributes": {
+      "name": "17"
+    },
+    "contactableFields": {},
+    "iconStyle": "1",
+    "iconType": null,
+    "iconColor": null,
+    "iconFilter": [],
+    "createForm": "1",
+    "updateForm": "",
+    "permissions": {
+      "edit entity": true,
+      "delete entity": true,
+      "share entity": true,
+      "view all instances": true,
+      "create instances": true,
+      "edit instances": true,
+      "delete instances": true,
+      "share instances": true
+    }
+  }
+}

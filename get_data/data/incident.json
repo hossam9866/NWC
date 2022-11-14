@@ -1,0 +1,41 @@
+{
+  "instance": {
+    "id": 11,
+    "entityId": "5",
+    "account": "1000013",
+    "login": "11",
+    "dateCreated": "2022-11-14T13:37:12+00:00",
+    "dateModified": "2022-11-14T13:37:12+00:00",
+    "iconType": null,
+    "iconColor": null,
+    "iconPath": null,
+    "iconStyle": "1",
+    "name": "Sample Trigger Incident",
+    "values": {
+      "17": "Sample Trigger Incident",
+      "19": 5,
+      "21": 9,
+      "23": 17,
+      "25": 27,
+      "27": [],
+      "29": [33, 35, 37, 31],
+      "33": 47,
+      "35": "This is test content",
+      "37": "2022-11-14T13:36:47+00:00",
+      "39": "2022-11-16T13:36:47+00:00",
+      "41": true,
+      "43": 57,
+      "47": null,
+      "57": "This is test content",
+      "61": "This is test content",
+      "63": "This is test content",
+      "65": true,
+      "67": 87
+    },
+    "permissions": {
+      "edit": true,
+      "delete": true,
+      "share": true
+    }
+  }
+}
