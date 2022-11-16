@@ -3,548 +3,530 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" />
     <script src="app.js"></script>
-    <title>E-mail</title>
+    <title>NWC E-mail</title>
   </head>
   <body>
-    <center class="wrapper">
-      <table class="main" width="100%">
-        <tr height="20"></tr>
-        <tr>
-          <td>
-            <table width="100%">
-              <tr>
-                <td width="10"></td>
-                <td>
-                  <img class="logo" src="assets/logo.png" width="100%" />
-                </td>
-                <td width="10"></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <!--level-->
-        <tr>
-          <td>
-            <table class="level level-5">
-              <tr>
-                <td>
-                  <p id="level-title">Urgent & important</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p id="level-paragraph">Immediate Life Threatening</p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <!--status-->
-        <tr>
-          <td style="text-align: center">
-            <p id="status" style="display: inline-block">Opened</p>
-            <p id="date" style="display: inline-block">05/10/2022</p>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <!--incident details-->
-        <tr>
-          <td>
-            <table class="details">
-              <tr>
-                <td class="name">Incident Number</td>
-                <td class="value">
-                  <span id="incident-number">52214</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="name">Incident Title</td>
-                <td class="value">
-                  <span id="incident-title">North</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="name">Cluster</td>
-                <td class="value">
-                  <span id="cluster">Cluster</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="name">City Business Unit</td>
-                <td class="value">
-                  <span id="city-business-unit">City Business Unit</span>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <!--incident agency,duration,classify and description-->
-        <tr>
-          <td class="two-columns">
-            <table class="column">
-              <tr>
-                <td>
-                  <table class="info-section">
-                    <caption>
-                      <p>Competent Agency & Expected Duration</p>
-                    </caption>
-                    <tr>
-                      <td>
-                        <p class="agency step-right space-top">
-                          COMPETENT AGENCY
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p
-                          id="competent-agency"
-                          class="value left-text step-right space-top">
-                          There are many variations of passages of Lorem Ipsum
-                          available
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="agency step-right space-top">
-                          EXPECTED DURATION
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p
-                          id="exepected-duration"
-                          class="value left-text step-right space-top">
-                          There are many variations of passages of Lorem Ipsum
-                          available
-                        </p>
-                      </td>
-                    </tr>
-                    <tr height="10"></tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-            <table class="column">
-              <tr>
-                <td>
-                  <table class="info-section">
-                    <caption>
-                      <p>Classify & Briefly Description</p>
-                    </caption>
-                    <tr>
-                      <td class="two-columns">
-                        <table
-                          class="column space-top"
-                          style="width: 100%; max-width: 100px; padding: 0">
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="water"> Water</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="water" />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="wastewater"> Wastewater</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="wastewater"
-                                      checked />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="under-line"></td>
-                          </tr>
-                        </table>
-                        <table
-                          class="column space-top"
-                          style="
-                            width: 100%;
-                            max-width: 180px;
-                            padding: 0 0 0 10px;
-                          ">
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="emergency"> Emergency</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="emergency" />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="schedule"> Schedule</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="schedule" />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="under-line"></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
+    <table class="main" width="100%">
+      <tr height="20"></tr>
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td width="10"></td>
+              <td>
+                <img class="logo" src="assets/logo.png" width="100%" />
+              </td>
+              <td width="10"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <!--level-->
+      <tr>
+        <td>
+          <table class="level level-5">
+            <tr>
+              <td>
+                <p id="level-title">Urgent & important</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p id="level-paragraph">Immediate Life Threatening</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <!--status-->
+      <tr>
+        <td style="text-align: center">
+          <p id="status" style="display: inline-block">Opened</p>
+          <p id="date" style="display: inline-block">05/10/2022</p>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <!--incident details-->
+      <tr>
+        <td>
+          <table class="details">
+            <tr>
+              <td class="name">Incident Number</td>
+              <td class="value">
+                <span id="incident-number">52214</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">Incident Title</td>
+              <td class="value">
+                <span id="incident-title">North</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">Cluster</td>
+              <td class="value">
+                <span id="cluster">Cluster</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">City Business Unit</td>
+              <td class="value">
+                <span id="city-business-unit">City Business Unit</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <!--incident agency,duration,classify and description-->
+      <tr>
+        <td class="two-columns">
+          <table class="column">
+            <tr>
+              <td>
+                <table class="info-section">
+                  <caption>
+                    <p>Competent Agency & Expected Duration</p>
+                  </caption>
+                  <tr>
+                    <td>
+                      <p class="agency step-right space-top">
+                        COMPETENT AGENCY
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p
+                        id="competent-agency"
+                        class="value left-text step-right space-top">
+                        There are many variations of passages of Lorem Ipsum
+                        available
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="agency step-right space-top">
+                        EXPECTED DURATION
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p
+                        id="exepected-duration"
+                        class="value left-text step-right space-top">
+                        There are many variations of passages of Lorem Ipsum
+                        available
+                      </p>
+                    </td>
+                  </tr>
+                  <tr height="10"></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table class="column">
+            <tr>
+              <td>
+                <table class="info-section">
+                  <caption>
+                    <p>Classify & Briefly Description</p>
+                  </caption>
+                  <tr>
+                    <td class="two-columns">
+                      <table class="column space-top q-left">
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="water"> Water</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="water" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="wastewater"> Wastewater</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="wastewater"
+                                    checked />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="under-line"></td>
+                        </tr>
+                      </table>
+                      <table class="column space-top q-right">
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="emergency"> Emergency</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="emergency" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="schedule"> Schedule</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="schedule" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="under-line"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
 
+                  <tr>
+                    <td class="two-columns">
+                      <table class="column space-top q-left">
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="wtp"> WTP</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="wtp" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="networks"> Networks</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="networks"
+                                    checked />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="flood-points">
+                                    Flood Points</label
+                                  >
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="flood-points"
+                                    checked />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                      <table class="column space-top q-right">
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="main-lines"> Main Lines</label>
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="main-lines" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table class="checkbox">
+                              <tr>
+                                <td width="300px">
+                                  <label for="technical-issues">
+                                    Technical Issues</label
+                                  >
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="technical-issues" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td width="300px">
+                                  <label for="stp-operational-status">
+                                    STP Operational Status</label
+                                  >
+                                </td>
+                                <td>
+                                  <input
+                                    onclick="return false"
+                                    type="checkbox"
+                                    id="stp-operational-status" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <tr>
+        <td>
+          <table class="action">
+            <tr>
+              <td>
+                <p class="name">Actions Taken to Reduce Impact</p>
+              </td>
+            </tr>
+            <tr height="12"></tr>
+            <tr>
+              <td>
+                <p id="action-taken" class="value">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quae, ipsam voluptas. Eaque, quisquam aspernatur? Consequatur,
+                  magnam tempore eum, quo, nisi dicta libero unde sit odit
+                  minima dolorum dolores in deleniti.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <tr>
+        <td class="two-columns">
+          <table class="column">
+            <tr>
+              <td>
+                <table class="info-section">
+                  <caption>
+                    <p>VIP Customer Affected</p>
+                  </caption>
+                  <tr>
+                    <td>
+                      <p
+                        id="vip-customer-affected"
+                        class="value left-text step-right space-top">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        In officia non repellendus dignissimos ducimus odio id
+                        beatae laboriosam voluptatibus dolorum consequatur
+                        deserunt, voluptas praesentium officiis architecto nihil
+                        vel mollitia maxime.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr height="20"></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <table class="column">
+            <tr>
+              <td>
+                <table class="info-section">
+                  <caption>
+                    <p>Areas Affected</p>
+                  </caption>
+                  <tr>
+                    <td>
+                      <p
+                        id="areas-affected"
+                        class="value left-text step-right space-top">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        In officia non repellendus dignissimos ducimus odio id
+                        beatae laboriosam voluptatibus dolorum consequatur
+                        deserunt, voluptas praesentium officiis architecto nihil
+                        vel mollitia maxime.
+                      </p>
+                    </td>
+                  </tr>
+                  <tr height="20"></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr height="20"></tr>
+      <tr>
+        <td class="two-columns">
+          <table class="column" style="margin-bottom: 20px">
+            <tbody class="questions">
+              <tr height="20"></tr>
+              <tr>
+                <td>
+                  <table class="info-section">
+                    <caption style="width: 80%; margin: 0 auto">
+                      <p>Crisis & Disaster Dept.</p>
+                    </caption>
+                    <tr height="20"></tr>
                     <tr>
-                      <td class="two-columns">
+                      <td>
+                        <p class="question">
+                          Do you need any support from Crisis & Disaster Center
+                          ( CDC ) .. ?
+                        </p>
+                      </td>
+                    </tr>
+                    <tr height="20"></tr>
+                    <tr>
+                      <td>
                         <table
-                          class="column space-top"
-                          style="width: 100%; max-width: 100px; padding: 0">
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="wtp"> WTP</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="wtp" />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="networks"> Networks</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="networks"
-                                      checked />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="flood-points">
-                                      Flood Points</label
-                                    >
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="flood-points"
-                                      checked />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                        <table
-                          class="column space-top"
                           style="
-                            width: 100%;
-                            max-width: 180px;
-                            padding: 0 0 0 10px;
+                            width: 80%;
+                            margin: 0 auto;
+                            text-align: center;
                           ">
                           <tr>
                             <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="main-lines"> Main Lines</label>
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="main-lines" />
-                                  </td>
-                                </tr>
-                              </table>
+                              <label for="crisis-yes"> Yes</label>
+                              <input
+                                onclick="return false"
+                                type="checkbox"
+                                id="crisis-yes" />
                             </td>
-                          </tr>
-                          <tr>
                             <td>
-                              <table class="checkbox">
-                                <tr>
-                                  <td width="300px">
-                                    <label for="technical-issues">
-                                      Technical Issues</label
-                                    >
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="technical-issues" />
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td width="300px">
-                                    <label for="stp-operational-status">
-                                      STP Operational Status</label
-                                    >
-                                  </td>
-                                  <td>
-                                    <input
-                                      onclick="return false"
-                                      type="checkbox"
-                                      id="stp-operational-status" />
-                                  </td>
-                                </tr>
-                              </table>
+                              <label for="crisis-no"> No</label>
+                              <input
+                                onclick="return false"
+                                type="checkbox"
+                                checked
+                                id="crisis-no" />
                             </td>
                           </tr>
+                          <tr height="20"></tr>
                         </table>
                       </td>
                     </tr>
                   </table>
                 </td>
               </tr>
-            </table>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <tr>
-          <td>
-            <table class="action">
-              <tr>
-                <td>
-                  <p class="name">Actions Taken to Reduce Impact</p>
-                </td>
-              </tr>
-              <tr height="12"></tr>
-              <tr>
-                <td>
-                  <p id="action-taken" class="value">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quae, ipsam voluptas. Eaque, quisquam aspernatur?
-                    Consequatur, magnam tempore eum, quo, nisi dicta libero unde
-                    sit odit minima dolorum dolores in deleniti.
-                  </p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <tr>
-          <td class="two-columns">
-            <table class="column">
+            </tbody>
+          </table>
+          <table class="column" style="margin-bottom: 20px">
+            <tbody class="questions">
+              <tr height="20"></tr>
               <tr>
                 <td>
                   <table class="info-section">
-                    <caption>
-                      <p>VIP Customer Affected</p>
+                    <caption style="width: 80%; margin: 0 auto">
+                      <p>Corporate Communication</p>
                     </caption>
+                    <tr height="20"></tr>
                     <tr>
                       <td>
-                        <p
-                          id="vip-customer-affected"
-                          class="value left-text step-right space-top">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. In officia non repellendus dignissimos ducimus
-                          odio id beatae laboriosam voluptatibus dolorum
-                          consequatur deserunt, voluptas praesentium officiis
-                          architecto nihil vel mollitia maxime.
+                        <p class="question">
+                          Does the event require press release or appearing in
+                          different media.. ?
                         </p>
                       </td>
                     </tr>
                     <tr height="20"></tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-            <table class="column">
-              <tr>
-                <td>
-                  <table class="info-section">
-                    <caption>
-                      <p>Areas Affected</p>
-                    </caption>
                     <tr>
                       <td>
-                        <p
-                          id="areas-affected"
-                          class="value left-text step-right space-top">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. In officia non repellendus dignissimos ducimus
-                          odio id beatae laboriosam voluptatibus dolorum
-                          consequatur deserunt, voluptas praesentium officiis
-                          architecto nihil vel mollitia maxime.
-                        </p>
+                        <table
+                          style="
+                            width: 80%;
+                            margin: 0 auto;
+                            text-align: center;
+                          ">
+                          <tr>
+                            <td>
+                              <label for="communication-yes"> Yes</label>
+                              <input
+                                onclick="return false"
+                                type="checkbox"
+                                checked
+                                id="communication-yes" />
+                            </td>
+                            <td>
+                              <label for="communication-no"> No</label>
+                              <input
+                                onclick="return false"
+                                type="checkbox"
+                                id="communication-no" />
+                            </td>
+                          </tr>
+                        </table>
+                        <tr height="20"></tr>
                       </td>
                     </tr>
-                    <tr height="20"></tr>
                   </table>
                 </td>
               </tr>
-            </table>
-          </td>
-        </tr>
-        <tr height="20"></tr>
-        <tr>
-          <td class="two-columns">
-            <table class="column" style="margin-bottom: 20px">
-              <tbody class="questions">
-                <tr height="20"></tr>
-                <tr>
-                  <td>
-                    <table class="info-section">
-                      <caption style="width: 80%; margin: 0 auto">
-                        <p>Crisis & Disaster Dept.</p>
-                      </caption>
-                      <tr height="20"></tr>
-                      <tr>
-                        <td>
-                          <p class="question">
-                            Do you need any support from Crisis & Disaster
-                            Center ( CDC ) .. ?
-                          </p>
-                        </td>
-                      </tr>
-                      <tr height="20"></tr>
-                      <tr>
-                        <td>
-                          <table
-                            style="
-                              width: 80%;
-                              margin: 0 auto;
-                              text-align: center;
-                            ">
-                            <tr>
-                              <td>
-                                <label for="crisis-yes"> Yes</label>
-                                <input
-                                  onclick="return false"
-                                  type="checkbox"
-                                  id="crisis-yes" />
-                              </td>
-                              <td>
-                                <label for="crisis-no"> No</label>
-                                <input
-                                  onclick="return false"
-                                  type="checkbox"
-                                  checked
-                                  id="crisis-no" />
-                              </td>
-                            </tr>
-                            <tr height="20"></tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table class="column" style="margin-bottom: 20px">
-              <tbody class="questions">
-                <tr height="20"></tr>
-                <tr>
-                  <td>
-                    <table class="info-section">
-                      <caption style="width: 80%; margin: 0 auto">
-                        <p>Corporate Communication</p>
-                      </caption>
-                      <tr height="20"></tr>
-                      <tr>
-                        <td>
-                          <p class="question">
-                            Does the event require press release or appearing in
-                            different media.. ?
-                          </p>
-                        </td>
-                      </tr>
-                      <tr height="20"></tr>
-                      <tr>
-                        <td>
-                          <table
-                            style="
-                              width: 80%;
-                              margin: 0 auto;
-                              text-align: center;
-                            ">
-                            <tr>
-                              <td>
-                                <label for="communication-yes"> Yes</label>
-                                <input
-                                  onclick="return false"
-                                  type="checkbox"
-                                  checked
-                                  id="communication-yes" />
-                              </td>
-                              <td>
-                                <label for="communication-no"> No</label>
-                                <input
-                                  onclick="return false"
-                                  type="checkbox"
-                                  id="communication-no" />
-                              </td>
-                            </tr>
-                          </table>
-                          <tr height="20"></tr>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </center>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
