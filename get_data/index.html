@@ -1,6 +1,92 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="app.js"></script>
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <div class="error-message"></div>
+    <div id="view-incident">
+      <div id="incident-name"></div>
+      <div class="incident-details">
+        <div class="info-row">
+          <div class="info-name">Cluster</div>
+          <div id="cluster" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">City Business Unit</div>
+          <div id="city-business-unit" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Incident For</div>
+          <div id="for" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Incident State</div>
+          <div id="state" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Level</div>
+          <div id="level" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Services Type</div>
+          <div id="service-type" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div id="service-type-water" class="info-name"></div>
+          <div id="water-type" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Areas Impacted</div>
+          <div id="areas-impacted" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">VIP Customer(s) Impacted</div>
+          <div id="vip-customer" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Actions Taken</div>
+          <div id="actions-taken" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Incident Start</div>
+          <div id="start-date" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Expeected duration</div>
+          <div id="expected-end" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Last Updated</div>
+          <div id="last-updated" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name">Report Status</div>
+          <div id="status" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name question">
+            Does it require support from the main support center?
+          </div>
+          <div id="require-support" class="info-value"></div>
+        </div>
+        <div class="info-row">
+          <div class="info-name question">
+            Does the incident require press release or appearing in other media?
+          </div>
+          <div id="require-media" class="info-value"></div>
+        </div>
+      </div>
+      <div class="sites"></div>
+      <div class="note">
+        <div class="scetion-name">Description</div>
+        <div class="note-date">
+          <span class="name">Last Modified</span>
+          <span id="note-modified-date"></span>
+        </div>
+        <div id="description"></div>
+      </div>
+    </div>
+  </body>
 </html>
