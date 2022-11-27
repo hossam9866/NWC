@@ -36,7 +36,13 @@ tbody {
   width: 700px;
   border-spacing: 0;
   background-color: #f3f8ff;
+  background-image: url(assets/bg_img_1.png), url(assets/bg_img_top_right.png),
+    url(assets/bg_img_bottom_left.png);
+  background-position: center center, top right, bottom left;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 400px 300px, 200px 200px, 200px 200px;
 }
+
 .logo {
   width: 100%;
 }
