@@ -1,0 +1,139 @@
+{
+  "responseCount": 1,
+  "logs": [
+    {
+      "id": "42215",
+      "logId": "638e0fe7aad04",
+      "logLevel": "info",
+      "date": "2022-12-05T15:36:07+00:00",
+      "ip": "188.248.78.202",
+      "actorName": "Osama Hegazy",
+      "actorType": "login",
+      "actorId": "23",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "53",
+      "objectName": "vdfs",
+      "operation": "created",
+      "description": "User 'Osama Hegazy' created data record 'vdfs'",
+      "metadata": {
+        "values": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "vdfs"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "Distribution"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "Water"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Central Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "fg"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-12T15:34:56+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2022-12-28T15:34:56+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": "sfagsdfg"
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "edfgsfgf"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "wdfgasfgsdf"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Northern Cities Business Unit"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "Internal"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Flood Points - Environmental Services"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": ""
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    }
+  ],
+  "totalCount": 24719,
+  "filterCount": 1
+}
