@@ -472,3 +472,14 @@ https://app.cdc-hq-nwc.live/api/customData/logs?q=api/call&request=customData/lo
     "totalCount": 25152,
     "filterCount": 2
 }
+
+
+
+
+
+
+51 and 55
+
+fetch("https://app.cdc-hq-nwc.live/api/customData/logs?q=api/call&request=customData/logs&limit=25&offset=0&sortField=date&sortOrder=desc&query=`logLevel` IN ('info','error') AND `logLevel` NOT IN ('access') AND `entityId` = 5 AND `objectType` = 'instance' AND `objectId` = '51'")
+	.then(response => response.json())
+	.then(data => console.log(data))

@@ -3,6 +3,15 @@
   --secondary-color: #aaaaaa;
   --gradient: linear-gradient(to bottom, #06538c, #598db2);
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(226, 226, 226);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(134, 166, 190);
+}
 body {
   margin: 0px;
 }
@@ -79,12 +88,23 @@ h4 {
   font-size: 18px;
   color: var(--primary-color);
 }
-#Title {
+.top-bar {
   color: black;
   background-color: rgb(229, 232, 237);
-  padding: 15px 0px 15px 52px;
+  padding: 15px 52px;
   font-size: 17px;
   font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#Title {
+  margin: 0px;
+}
+#edit-history {
+  padding: 10px 20px;
+  display: none;
 }
 .incident-details {
   background-color: white;
@@ -174,6 +194,111 @@ h4 {
   font-weight: 400;
   color: rgb(106, 112, 126);
   margin-top: 14px;
+}
+#page-shadow {
+  background-color: rgb(134, 134, 134);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+}
+.popup {
+  width: 600px;
+  max-height: 500px;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  padding: 20px 30px;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  visibility: hidden;
+  transition: transform 0.4s ease 0s, top 0.4s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 6px;
+  display: flex;
+  flex-direction: column;
+}
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup .title {
+  font-size: 22px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0px 0px 18px;
+}
+.elements-holder {
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+#popup-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 40px 50px 0px;
+}
+.change-log {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  width: 100%;
+  margin-bottom: 20px;
+}
+.change-log:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+.actor-element {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: rgb(37, 104, 154);
+  margin: 0px 0px 2px;
+}
+.actor-element h2 {
+  display: inline;
+  margin: 0px;
+  font-size: 19px;
+  font-weight: 700;
+}
+.actor-element span {
+  margin: 0px 0px 0px 10px;
+  font-size: 19px;
+  font-weight: 400;
+  width: 160px;
+}
+.change-row {
+  color: var(--secondary-color);
+  font-size: 20px;
+  margin: 0px 0px 10px;
+}
+.button-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#close-popup-button {
+  width: 97px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  color: white;
+  margin: 0px auto 40px;
+  font-size: 17px;
+  border: none;
+}
+#edit-history {
+  width: 120px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  border: none;
 }
 @media (max-width: 800px) {
   .incident-details {

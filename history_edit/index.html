@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="page-shadow"></div>
+
+    <div id="view-incident">
+      <div class="top-bar">
+        <p id="Title"></p>
+        <button id="edit-history">History</button>
+      </div>
+      <div id="incident-details" class="incident-details">
+        <div id="start-details"></div>
+        <div id="mid-details"></div>
+        <div id="dates-details"></div>
+        <div id="end-details"></div>
+      </div>
+      <div class="sites"></div>
+      <div class="note">
+        <div class="scetion-name">Description</div>
+        <div class="note-date">
+          <span class="name">Last Modified</span>
+          <span id="Date-Modified"></span>
+        </div>
+        <div id="Description"></div>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <p class="title">Incident Edits History</p>
+      <div class="elements-holder">
+        <div id="popup-elements"></div>
+        <div class="button-holder">
+          <button id="close-popup-button">Ok</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

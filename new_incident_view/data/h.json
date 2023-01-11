@@ -1,0 +1,627 @@
+{
+  "responseCount": 2,
+  "logs": [
+    {
+      "id": "39439",
+      "logId": "6388bee9f1863",
+      "logLevel": "info",
+      "date": "2022-12-01T14:49:14+00:00",
+      "ip": "47.54.59.10",
+      "actorName": "Alexander Jones",
+      "actorType": "login",
+      "actorId": "11",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "51",
+      "objectName": "This is an incident",
+      "operation": "updated",
+      "description": "User 'Alexander Jones' modified data record 'This is an incident'",
+      "metadata": {
+        "oldValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "This is an incident"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "Distribution"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "Water"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Northern Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is the summary of information"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-01T14:30:00+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2022-12-28T14:30:00+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": "All of them"
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "None"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "Country Wide"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Al-Qassim"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "Internal"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Network,Flood Points - Environmental Services,Technical Issue"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": ""
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ],
+        "newValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "This is an incident"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "Distribution"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "Water"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Northern Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is the summary of information"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-21T14:30:00+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2022-12-28T14:30:00+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Closed"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": "All of them"
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "None"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "Country Wide"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Al-Qassim"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "Internal"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Network,Flood Points - Environmental Services,Technical Issue"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": ""
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "39013",
+      "logId": "6388bb0d5fb0b",
+      "logLevel": "info",
+      "date": "2022-12-01T14:32:45+00:00",
+      "ip": "47.54.59.10",
+      "actorName": "Alexander Jones",
+      "actorType": "login",
+      "actorId": "11",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "51",
+      "objectName": "This is an incident",
+      "operation": "created",
+      "description": "User 'Alexander Jones' created data record 'This is an incident'",
+      "metadata": {
+        "values": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "This is an incident"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "Distribution"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "Water"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Northern Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is the summary of information"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-01T14:30:00+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2022-12-28T14:30:00+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": "All of them"
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "None"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "Country Wide"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Al-Qassim"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "Internal"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Network,Flood Points - Environmental Services,Technical Issue"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": ""
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "39439",
+      "logId": "6388bee9f1863",
+      "logLevel": "info",
+      "date": "2022-12-01T14:49:14+00:00",
+      "ip": "47.54.59.10",
+      "actorName": "Hossam Gamal",
+      "actorType": "login",
+      "actorId": "11",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "51",
+      "objectName": "This is an incident",
+      "operation": "updated",
+      "description": "User 'Alexander Jones' modified data record 'This is an incident'",
+      "metadata": {
+        "oldValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "This is an incident"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "Distribution"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "Water"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Northern Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is the summary of information"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-01T14:30:00+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2022-12-28T14:30:00+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": "All of them"
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "None"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "Country Wide"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Al-Qassim"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "Internal"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Network,Flood Points - Environmental Services,Technical Issue"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": ""
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ],
+        "newValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "This is an incident"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "Distribution"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "4"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "Water"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Western Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is the summary of information"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-01T14:30:00+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2022-12-28T14:30:00+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Closed"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": "All of them"
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "None"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "Country Wide"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Al-Qassim"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "Internal"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Network,Flood Points - Environmental Services,Technical Issue"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": ""
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    }
+  ],
+  "totalCount": 25152,
+  "filterCount": 2
+}

@@ -133,6 +133,21 @@ function dataShow(data, valueElement) {
     valueElement.innerText = data;
   }
 }
+function apiGet(api) {
+  return new Promise((resolve, reject) => {
+    let request = new XMLHttpRequest();
+    request.open("GET", api);
+    request.send();
+    request.onload = function () {
+      if (this.status === 200) {
+        let data = JSON.parse(this.responseText);
+        resolve(data);
+      } else {
+        reject();
+      }
+    };
+  });
+}
 
 function getIncident() {
   //Widget is an iframe, so we need the location of the parent.
@@ -144,43 +159,10 @@ function getIncident() {
 
   let incident, entity;
 
-  let getIncidentData = new Promise((resolve, reject) => {
-    let request = new XMLHttpRequest();
-
-    request.open(
-      "GET",
-      `https://hossam9866.github.io/NWC/new_incident_view/data/y.json` //https://app.cdc-hq-nwc.live/?q=api/call&request=customData/entity/5/instance/${incidentId}
-    );
-
-    request.send();
-    request.onload = function () {
-      if (this.status === 200) {
-        let data = JSON.parse(this.responseText);
-        resolve(data);
-      } else {
-        reject();
-      }
-    };
-  });
-  let getEntitytData = new Promise((resolve, reject) => {
-    let request = new XMLHttpRequest();
-    request.open(
-      "GET",
-      "https://hossam9866.github.io/NWC/new_incident_view/data/x.json" //https://app.cdc-hq-nwc.live/?q=api/call&request=customData/entity/5
-    );
-
-    request.send();
-    request.onload = function () {
-      if (this.status === 200) {
-        let data = JSON.parse(this.responseText);
-        resolve(data);
-      } else {
-        reject();
-      }
-    };
-  });
-
-  Promise.all([getIncidentData, getEntitytData])
+  Promise.all([
+    apiGet(`data/y.json`), //https://app.cdc-hq-nwc.live/?q=api/call&request=customData/entity/5/instance/${incidentId}
+    apiGet("data/x.json"), //https://app.cdc-hq-nwc.live/?q=api/call&request=customData/entity/5
+  ])
     .then((datas) => {
       //get data frm api
       incident = datas[0]["instance"];
@@ -222,10 +204,103 @@ function getIncident() {
       errorElement.innerText = "There is a problem getting data";
     });
 }
+function showPopupElements() {
+  let editHistoryButton = document.getElementById("edit-history");
+  let pageShadowElement = document.getElementById("page-shadow");
+  editHistoryButton.style.display = "block";
+  editHistoryButton.onclick = () => {
+    let popupElement = document.getElementById("popup");
+    popupElement.classList.add("open-popup");
+    pageShadowElement.style.display = "block";
+  };
+  document.getElementById("close-popup-button").onclick = () => {
+    document.getElementById("popup").classList.remove("open-popup");
+    pageShadowElement.style.display = "none";
+  };
+}
+function setEditHistoryData(log) {
+  let popupElements = document.getElementById("popup-elements");
+  let actorName = document.createElement("h2");
+  let updateDate = document.createElement("span");
+  let actorElement = document.createElement("div");
+  let logElement = document.createElement("div");
+  actorElement.classList.add("actor-element");
+  logElement.classList.add("change-log");
+  actorName.innerText = `${log["actorName"]} ${log["actorId"]} Edit On: `;
+  updateDate.innerText = showDate(new Date(log["date"]));
+  actorElement.append(actorName);
+  actorElement.append(updateDate);
+  logElement.append(actorElement);
+  for (let i = 0; i < log["metadata"]["newValues"].length; i++) {
+    let fieldName = log["metadata"]["newValues"][i]["fieldName"];
+    let oldValue = log["metadata"]["oldValues"][i]["value"];
+    let newValue = log["metadata"]["newValues"][i]["value"];
+    if (oldValue != newValue) {
+      let changeElement = document.createElement("p");
+      if (
+        Date.parse(oldValue) &&
+        oldValue.includes("T") &&
+        oldValue.includes("+")
+      ) {
+        changeElement.innerText = `Changed ${fieldName} from (${showDate(
+          new Date(oldValue)
+        )} to ${showDate(new Date(newValue))})`;
+      } else {
+        changeElement.innerText = `Changed ${fieldName} from (${oldValue} to ${newValue})`;
+      }
+
+      changeElement.classList.add("change-row");
+      logElement.appendChild(changeElement);
+    }
+  }
+  popupElements.appendChild(logElement);
+}
+function getUpdateHistory() {
+  /*   const queryString = parent.location.hash;
+  const parameters = new URLSearchParams(queryString.split("?")[1]);
+  const value = parameters.get("context");
+  let incidentId = value.split(":")[2];
+  let api =
+    "https://app.cdc-hq-nwc.live/api/customData/logs?q=api/call&request=customData/logs&limit=25&offset=0&sortField=date&sortOrder=desc&query=`logLevel` IN ('info','error') AND `logLevel` NOT IN ('access') AND `entityId` = 5 AND `objectType` = 'instance' AND `objectId` = 'incidentId'";
+  api = api.replace("incidentId", incidentId); */
+  apiGet("data/h.json")
+    .then((data) => {
+      let logs = data["logs"];
+      let shown = false;
+      document.getElementById("popup-elements").innerHTML = "";
+      logs.forEach((log) => {
+        if (log["operation"] == "updated") {
+          setEditHistoryData(log);
+          if (!shown) {
+            console.log("Flag");
+            showPopupElements();
+            shown = true;
+          }
+        }
+      });
+    })
+    .catch((err) => {});
+}
+document.addEventListener("click", (event) => {
+  let popupElement = document.getElementById("popup");
+  let editHistoryButton = document.getElementById("edit-history");
+  let pageShadowElement = document.getElementById("page-shadow");
+  if (
+    popupElement.classList.contains("open-popup") &&
+    !popupElement.contains(event.target) &&
+    event.target != editHistoryButton
+  ) {
+    popupElement.classList.remove("open-popup");
+    pageShadowElement.style.display = "none";
+  }
+});
 //Initial load of widget
+
 getIncident();
+getUpdateHistory();
 //Metronome updates
 metronome.bindUpdate(() => {
   getIncident();
+  getUpdateHistory();
   metronome.completeUpdate();
 });

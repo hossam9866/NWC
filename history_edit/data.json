@@ -1,0 +1,1023 @@
+{
+  "responseCount": 6,
+  "logs": [
+    {
+      "id": "121489",
+      "logId": "63b8af83e0e2f",
+      "logLevel": "info",
+      "date": "2023-01-06T23:32:20+00:00",
+      "ip": "197.56.0.103",
+      "actorName": "Hossam Latta",
+      "actorType": "login",
+      "actorId": "17",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "57",
+      "objectName": "Test External 1",
+      "operation": "updated",
+      "description": "User 'Hossam Latta' modified data record 'Test External 1'",
+      "metadata": {
+        "oldValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 1"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Scheduled"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "3"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something 1"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something2"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ],
+        "newValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 1"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Scheduled"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "1"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "Northern Cluster"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something 1"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-11T23:31:57+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": "2023-02-02T23:31:57+00:00"
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "Yes"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something2"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "121363",
+      "logId": "63b89838deb1a",
+      "logLevel": "info",
+      "date": "2023-01-06T21:52:57+00:00",
+      "ip": "197.56.0.103",
+      "actorName": "Hossam Latta",
+      "actorType": "login",
+      "actorId": "17",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "57",
+      "objectName": "Test External 1",
+      "operation": "updated",
+      "description": "User 'Hossam Latta' modified data record 'Test External 1'",
+      "metadata": {
+        "oldValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 12"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Scheduled"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "3"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something 1"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something2"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ],
+        "newValues": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 1"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Scheduled"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "3"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something 1"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something2"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "81891",
+      "logId": "639b4f4880f54",
+      "logLevel": "info",
+      "date": "2022-12-15T16:46:00+00:00",
+      "ip": "154.179.77.13",
+      "actorName": "Hossam Latta",
+      "actorType": "login",
+      "actorId": "17",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "57",
+      "objectName": "Test External 12",
+      "operation": "updated",
+      "description": "User 'Hossam Latta' modified data record 'Test External 12'",
+      "metadata": {
+        "values": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 12"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Scheduled"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "3"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something 1"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something2"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "71515",
+      "logId": "6398c47ac1e5c",
+      "logLevel": "info",
+      "date": "2022-12-13T18:29:14+00:00",
+      "ip": "102.45.226.23",
+      "actorName": "Hossam Latta",
+      "actorType": "login",
+      "actorId": "17",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "57",
+      "objectName": "Test External 12",
+      "operation": "updated",
+      "description": "User 'Hossam Latta' modified data record 'Test External 12'",
+      "metadata": {
+        "values": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 12"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "3"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something 1"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "61453",
+      "logId": "6396eb34b577c",
+      "logLevel": "info",
+      "date": "2022-12-12T08:49:56+00:00",
+      "ip": "102.45.226.23",
+      "actorName": "Hossam Latta",
+      "actorType": "login",
+      "actorId": "17",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "57",
+      "objectName": "Test External 1",
+      "operation": "updated",
+      "description": "User 'Hossam Latta' modified data record 'Test External 1'",
+      "metadata": {
+        "values": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External 1"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    },
+    {
+      "id": "46473",
+      "logId": "6390962241143",
+      "logLevel": "info",
+      "date": "2022-12-07T13:33:22+00:00",
+      "ip": "47.54.59.10",
+      "actorName": "Alexander Jones",
+      "actorType": "login",
+      "actorId": "11",
+      "actorAccount": "1000013",
+      "accountName": "Incident Management",
+      "entityId": "5",
+      "objectType": "instance",
+      "objectId": "57",
+      "objectName": "Test External",
+      "operation": "created",
+      "description": "User 'Alexander Jones' created data record 'Test External'",
+      "metadata": {
+        "values": [
+          {
+            "fieldId": "17",
+            "fieldName": "Title",
+            "value": "Test External"
+          },
+          {
+            "fieldId": "19",
+            "fieldName": "Incident State",
+            "value": "Emergency"
+          },
+          {
+            "fieldId": "21",
+            "fieldName": "Incident For",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "23",
+            "fieldName": "Level",
+            "value": "2"
+          },
+          {
+            "fieldId": "25",
+            "fieldName": "Service Type",
+            "value": "(Deleted)"
+          },
+          {
+            "fieldId": "33",
+            "fieldName": "Cluster",
+            "value": "HQ"
+          },
+          {
+            "fieldId": "35",
+            "fieldName": "Description",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "37",
+            "fieldName": "Incident Start Date",
+            "value": "2022-12-07T13:32:43+00:00"
+          },
+          {
+            "fieldId": "39",
+            "fieldName": "Expected End Date",
+            "value": ""
+          },
+          {
+            "fieldId": "41",
+            "fieldName": "Requires media release",
+            "value": "No"
+          },
+          {
+            "fieldId": "43",
+            "fieldName": "Status",
+            "value": "Open"
+          },
+          {
+            "fieldId": "47",
+            "fieldName": "last updated",
+            "value": ""
+          },
+          {
+            "fieldId": "57",
+            "fieldName": "VIP Customer(s) Impacted",
+            "value": ""
+          },
+          {
+            "fieldId": "61",
+            "fieldName": "Actions Taken",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "63",
+            "fieldName": "Areas Impacted",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "65",
+            "fieldName": "Support from CDC required",
+            "value": "No"
+          },
+          {
+            "fieldId": "67",
+            "fieldName": "City Business Unit",
+            "value": "Crisis Disaster Center"
+          },
+          {
+            "fieldId": "69",
+            "fieldName": "Incident Type",
+            "value": "External"
+          },
+          {
+            "fieldId": "71",
+            "fieldName": "Service Subtype",
+            "value": "Technical Issue,Network"
+          },
+          {
+            "fieldId": "73",
+            "fieldName": "Incident Cause",
+            "value": "This is something"
+          },
+          {
+            "fieldId": "75",
+            "fieldName": "Incident Category",
+            "value": "Power Outage"
+          },
+          {
+            "fieldId": "101",
+            "fieldName": "External Acknowledged",
+            "value": "No"
+          }
+        ]
+      }
+    }
+  ],
+  "totalCount": 61164,
+  "filterCount": 6
+}

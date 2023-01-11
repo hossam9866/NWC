@@ -3,12 +3,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="page-shadow"></div>
     <div class="loading">
       <div class="loader"></div>
       <div class="error-message"></div>
     </div>
     <div id="view-incident">
-      <div id="Title"></div>
+      <div class="top-bar">
+        <p id="Title"></p>
+        <button id="edit-history">History</button>
+      </div>
       <div id="incident-details" class="incident-details">
         <div id="start-details"></div>
         <div id="mid-details"></div>
@@ -23,6 +27,15 @@
           <span id="Date-Modified"></span>
         </div>
         <div id="Description"></div>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <p class="title">Incident Edits History</p>
+      <div class="elements-holder">
+        <div id="popup-elements"></div>
+        <div class="button-holder">
+          <button id="close-popup-button">Ok</button>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>

@@ -1,0 +1,207 @@
+<style>
+  :root {
+    --primary-color: #06538c;
+    --secondary-color: #aaaaaa;
+    --gradient: linear-gradient(to bottom, #06538c, #598db2);
+  }
+  body {
+    margin: 0px;
+  }
+  figure {
+    margin: 0px;
+  }
+  a,
+  p,
+  div,
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .top-view-hoder {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: calc(100% - 245px);
+    height: -webkit-fill-available;
+  }
+  .page-name {
+    background-color: rgb(230, 237, 243);
+    padding: 14px 0px 14px 16px;
+  }
+  .page-name p {
+    margin: 0px;
+    font-size: 18px;
+    color: var(--primary-color);
+  }
+  .top-view {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .view-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .incident-count-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    width: 330px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding-left: 20px;
+    margin: 10px 12px;
+  }
+  .new-incident-color {
+    background-color: #f23535;
+  }
+  .inprogress-incident-color {
+    background-color: #f0bf37;
+  }
+  .solved-incident-color {
+    background-color: #83c934;
+  }
+  .incident-count-card img {
+    width: 40px;
+  }
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .info-column .number {
+    margin: 0px;
+    font-size: 35px;
+    color: white;
+  }
+  .info-column .type {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+  }
+  @media (max-width: 1373px) {
+    .incident-count-card {
+      width: 300px;
+      padding-left: 18px;
+      margin: 10px 4px;
+    }
+  }
+  @media (max-width: 1253px) {
+    .incident-count-card {
+      width: 250px;
+      padding-left: 8px;
+      margin: 10px 4px;
+    }
+    .incident-count-card img {
+      width: 30px;
+    }
+    .info-column .number {
+      font-size: 28px;
+    }
+    .info-column .type {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 1073px) {
+    .incident-count-card {
+      width: 200px;
+      padding-left: 8px;
+      margin: 10px 3px;
+    }
+    .info-column .type {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 911px) {
+    .incident-count-card {
+      width: 150px;
+      padding-left: 8px;
+      margin: 10px 3px;
+    }
+    .info-column .number {
+      font-size: 20px;
+    }
+    .info-column .type {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 800px) {
+    .top-view-hoder {
+      width: calc(100% - 90px);
+    }
+    .incident-count-card {
+      width: 200px;
+      padding-left: 8px;
+      margin: 10px 3px;
+    }
+    .info-column .number {
+      font-size: 28px;
+    }
+    .info-column .type {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 340px) {
+    .incident-count-card {
+      width: 150px;
+      padding-left: 8px;
+      margin: 10px 3px;
+    }
+    .info-column .number {
+      font-size: 20px;
+    }
+    .info-column .type {
+      font-size: 11px;
+    }
+  }
+</style>
+
+<div class="top-view">
+  <div class="view-cards">
+    <div class="incident-count-card new-incident-color">
+      <figure>
+        <img
+          src="/files/1000013/files/Widget_Asset/new_incidents.png"
+          data-image="d94ok9ayaa66" />
+      </figure>
+      <div class="info-column">
+        <p class="number" id="new-incident-number">loading</p>
+        <h3 class="type">Today new incident</h3>
+      </div>
+    </div>
+    <div class="incident-count-card inprogress-incident-color">
+      <figure>
+        <img
+          src="/files/1000013/files/Widget_Asset/inprogreess_incidents.png"
+          data-image="l8vscaknt6gt" />
+      </figure>
+      <div class="info-column">
+        <p class="number" id="in-progress-number">loading</p>
+        <h3 class="type">Today in progress incident</h3>
+      </div>
+    </div>
+    <div class="incident-count-card solved-incident-color">
+      <figure>
+        <img
+          src="/files/1000013/files/Widget_Asset/solved_incidents.png"
+          data-image="yyxyszema18j" />
+      </figure>
+      <div class="info-column">
+        <p class="number" id="solved-incident-number">loading</p>
+        <h3 class="type">Today solved incident</h3>
+      </div>
+    </div>
+  </div>
+</div>
