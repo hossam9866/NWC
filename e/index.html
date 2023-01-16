@@ -1,0 +1,328 @@
+<html>
+  <head>
+    <title>New Message</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: #bfd0db;
+        background-image: url("https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/bg-cropped.png"),
+          url("https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/bg-cropped_1.png"),
+          url("https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/bg-cropped.png");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: top left, center right, bottom left;
+        background-size: 300px 300px;
+      }
+      .logo {
+      }
+      .mg-bottom {
+        margin-bottom: 20px;
+      }
+      .logo img {
+        width: 100%;
+      }
+      .date {
+        width: 100%;
+      }
+      #date {
+        font-size: 18px;
+        padding-left: 20px;
+      }
+      .title {
+        background: linear-gradient(to left, #ed1a23, #2f6f9e, #05538c);
+        padding: 27px 0px;
+        width: 100%;
+        border-radius: 18px;
+      }
+      .title p {
+        color: white;
+        font-size: 34px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .cluster {
+        background-color: white;
+        padding: 8px 15px;
+        border-radius: 18px;
+        width: 60%;
+        margin-top: -10px;
+      }
+      .cluster p {
+        text-align: center;
+      }
+      .row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+      .row .sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+      }
+      .half-width {
+        width: 48%;
+      }
+      .full-width {
+        width: 100%;
+      }
+      .section-header {
+        background: linear-gradient(to left, #00b0f0, #05538c);
+        padding: 2px 5px;
+        border-radius: 18px;
+        min-width: 50%;
+        z-index: 2;
+      }
+      .section-header p {
+        color: white;
+        text-align: center;
+        font-size: 16px;
+      }
+      .section-content {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff6c;
+        padding: 30px 0px;
+        border: 2px solid white;
+        border-radius: 18px;
+        margin-top: -15px;
+        z-index: 1;
+      }
+      .section-content p {
+        margin: 0 15px;
+      }
+      #confirm {
+        color: #ffffff;
+        font-size: 18px;
+        border-style: solid;
+        border-color: #05538c;
+        border-width: 5px 35px;
+        background: #05538c;
+        border-radius: 18px;
+        text-decoration: none;
+        line-height: 22px;
+        width: auto;
+        text-align: center;
+      }
+      .contacts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .contact img {
+        width: 20px;
+      }
+      .contact p,
+      .contact a {
+        padding-left: 5px;
+        text-decoration: none;
+        color: white;
+      }
+      #download {
+        position: absolute;
+        top: 20px;
+        right: 5px;
+      }
+      @media (max-width: 660px) {
+        .container {
+          width: auto;
+          padding: 20px 30px;
+        }
+      }
+      @media (max-width: 600px) {
+        .title {
+          padding: 22px 0px;
+        }
+        .title p {
+          font-size: 27px;
+        }
+        .cluster {
+          padding: 8px 15px;
+          width: 70%;
+        }
+        .section-header {
+          padding: 2px 5px;
+          min-width: 75%;
+        }
+        .section-header p {
+          font-size: 15px;
+        }
+        .section-content {
+          padding: 30px 0px;
+          margin-top: -15px;
+        }
+        .section-content p {
+          margin: 0 12px;
+          font-size: 15px;
+        }
+        .contacts {
+          justify-content: space-around;
+          flex-wrap: wrap;
+        }
+        .contact {
+          flex-wrap: wrap;
+        }
+        .contact img {
+          width: 17px;
+        }
+        .contact p,
+        .contact a,
+        .contact span {
+          padding-left: 4px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mg-bottom logo">
+        <img
+          src="https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/logo.png"
+          alt="NWC Logo" />
+      </div>
+      <div class="date flag-to-remove">
+        <p id="date">date</p>
+      </div>
+      <div class="title flag-to-remove">
+        <p id="title">title</p>
+      </div>
+      <div class="mg-bottom cluster flag-to-remove">
+        <p>
+          <span id="cluster">......cluster</span>
+          |
+          <span id="business-unit">.......business-unit</span>
+        </p>
+      </div>
+      <div class="row mg-bottom flag-to-remove">
+        <div class="sec half-width">
+          <div class="section-header"><p id="header1">header1</p></div>
+          <div class="section-content">
+            <p id="content1">content1</p>
+          </div>
+        </div>
+        <div class="sec half-width">
+          <div class="section-header"><p id="header2">header2</p></div>
+          <div class="section-content">
+            <p id="content2">content2</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mg-bottom flag-to-remove">
+        <div class="full-width sec">
+          <div class="section-header"><p id="header3">header3</p></div>
+          <div class="section-content">
+            <p id="content3">content3</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mg-bottom flag-to-remove">
+        <div class="sec half-width">
+          <div class="section-header"><p id="header4">header4</p></div>
+          <div class="section-content">
+            <p id="content4">content4</p>
+          </div>
+        </div>
+        <div class="sec half-width">
+          <div class="section-header"><p id="header5">header5</p></div>
+          <div class="section-content">
+            <p id="content5">content5</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mg-bottom flag-to-remove">
+        <div class="full-width sec">
+          <div class="section-header"><p id="header6">header6</p></div>
+          <div class="section-content">
+            <p id="content6">content6</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mg-bottom flag-to-remove">
+        <div class="sec half-width">
+          <div class="section-header"><p id="header7">header7</p></div>
+          <div class="section-content">
+            <p id="content7">content7</p>
+          </div>
+        </div>
+        <div class="sec half-width">
+          <div class="section-header"><p id="header8">header8</p></div>
+          <div class="section-content">
+            <p id="content8">content8</p>
+          </div>
+        </div>
+      </div>
+      <div class="confirm mg-bottom flag-to-remove">
+        <a id="confirm" target="_blank">Confirm</a>
+      </div>
+      <div class="contacts">
+        <div class="contact">
+          <img
+            src="https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/icons8-monitor-video-64.png"
+            alt="Hot Line" />
+          <a href="tel:19595">19595</a>
+        </div>
+        <div class="contact">
+          <img
+            src="https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/icons8-phone-50.png"
+            alt="Phone" />
+          <a href="tel:0112931260">0112931260</a>
+        </div>
+        <div class="contact">
+          <img
+            src="https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/icons8-envelope-50.png"
+            alt="E-Mail" />
+          <a href="mailto:HQ-CDC@nwc.com.sa">HQ-CDC@nwc.com.sa</a>
+        </div>
+        <div class="contact">
+          <p>
+            <span style="color: #05538c; font-weight: 700">HQ</span>
+            <span style="color: white; font-weight: 700"> | </span>
+            <span style="color: white; font-weight: 700">المركز الرئيسي</span>
+          </p>
+        </div>
+      </div>
+      <button id="download" style="border: none; background: transparent">
+        <img
+          style="width: 30px"
+          src="https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/icons8-downloads-100.png"
+          alt="Download" />
+        <p style="color: #05538c; font-size: 12px">Download</p>
+      </button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
