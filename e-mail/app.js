@@ -68,6 +68,6 @@ document.getElementById("download").onclick = () => {
   download(filename, text);
 };
 
-//document.getElementById("download").click();
+document.getElementById("download").click();
 
-//document.querySelector("html").innerHTML = "";
+document.querySelector("html").innerHTML = "";
