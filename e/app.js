@@ -2,7 +2,7 @@ window.onload = () => {
   let idList;
   function getIdsNames() {
     idList = ["date", "cluster", "business-unit"];
-    for (let i = 1; i < 9; i++) {
+    for (let i = 1; i < 12; i++) {
       idList.push(`header${i}`);
       idList.push(`content${i}`);
     }
