@@ -29,5 +29,22 @@
         <p>F</p>
       </v:textbox>
     </v:roundrect>
+    <script>
+      let xhr = new XMLHttpRequest();
+      xhr.setRequestHeader("Connection", "close");
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.setRequestHeader(
+        "Authorization",
+        " Basic YzA2ZTQzY2Q4YjVhOWFjYmMwZmJmOTVjYzYwNWQ5Y2Y4ZTBjZDgyMzo5OGUzZjBkNDhlYzkxZWNhODRkNjdiMDNhNzljZjc4M2UzMmE4MTY4"
+      );
+      xhr.open(
+        "GET",
+        "https://eqsash.com/articles/kak-otpravit-ili-poluchit-http-zagolovki-na-javascript?l=en"
+      );
+      xhr.send();
+      xhr.onreadystatechange = function () {
+        console.log(this.status);
+      };
+    </script>
   </body>
 </html>

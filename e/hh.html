@@ -1,0 +1,16 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      let request = new XMLHttpRequest();
+      request.open(
+        "GET",
+        `https://app.cdc-hq-nwc.live/api/customData/entity/5/management/instance?request=customData/entity/5/management/instance&filter=[{"clauses":[{"field":"103","op":"=","value":"399ece6f-f8eb-4d88-a213-a693caa697f1"}]}]`
+      );
+      request.send();
+      request.onload = function () {
+        console.log(this.status);
+      };
+    </script>
+  </body>
+</html>

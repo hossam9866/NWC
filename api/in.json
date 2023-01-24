@@ -1,0 +1,51 @@
+{
+  "responseCount": 1,
+  "instances": [
+    {
+      "id": "141",
+      "entityId": "5",
+      "account": "1000013",
+      "login": "11",
+      "visibilityLevel": "account",
+      "dateCreated": "2023-01-18T15:28:15+00:00",
+      "dateModified": "2023-01-18T15:28:15+00:00",
+      "iconType": null,
+      "iconColor": null,
+      "iconPath": null,
+      "iconStyle": "1",
+      "name": "Sample Incident - Updated Create",
+      "values": {
+        "17": "Sample Incident - Updated Create",
+        "19": 5,
+        "21": 9,
+        "23": 23,
+        "25": 29,
+        "33": 47,
+        "35": "Sample Incident",
+        "37": "2023-01-18T15:26:28+00:00",
+        "39": "2023-01-25T15:26:28+00:00",
+        "41": false,
+        "43": 57,
+        "47": null,
+        "57": "Sample Incident",
+        "61": "Sample Incident",
+        "63": "Sample Incident",
+        "65": false,
+        "67": 71,
+        "69": 109,
+        "71": [39],
+        "73": null,
+        "75": 0,
+        "101": false,
+        "103": "399ece6f-f8eb-4d88-a213-a693caa697f1"
+      },
+      "permissions": {
+        "edit": true,
+        "delete": true,
+        "share": true
+      }
+    }
+  ],
+  "totalCount": 29,
+  "filterCount": 1
+}
