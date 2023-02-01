@@ -1,0 +1,15 @@
+{
+  "filterCount": 1,
+  "totalCount": 1,
+  "responseCount": 1,
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Alexander Jones",
+      "timestamp": "2023-01-31T16:18:16+00:00",
+      "method": "email",
+      "response": "confirmed",
+      "queued_time": "2023-01-31T16:13:17+00:00"
+    }
+  ]
+}

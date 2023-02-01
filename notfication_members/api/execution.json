@@ -1,0 +1,49 @@
+{
+  "execution": {
+    "triggerId": 13,
+    "match": {
+      "context": "formSubmission",
+      "contextData": "1",
+      "instanceId": 191,
+      "instanceName": "TEST API SUMMARY",
+      "status": "success",
+      "time": "2023-01-31T16:13:13+00:00"
+    },
+    "executedActions": [
+      {
+        "id": 711,
+        "entityId": 5,
+        "triggerId": 13,
+        "executionId": 707,
+        "status": "success",
+        "time": "2023-01-31T16:13:14+00:00",
+        "targetId": "1251",
+        "targetName": null,
+        "action": {
+          "id": 121,
+          "order": 0,
+          "isBlocking": false,
+          "type": "alertSend",
+          "settings": "{\"alertId\":\"1249\"}"
+        }
+      },
+      {
+        "id": 713,
+        "entityId": 5,
+        "triggerId": 13,
+        "executionId": 707,
+        "status": "success",
+        "time": "2023-01-31T16:13:14+00:00",
+        "targetId": "191",
+        "targetName": "TEST API SUMMARY",
+        "action": {
+          "id": 123,
+          "order": 1,
+          "isBlocking": false,
+          "type": "shareInstanceLookup",
+          "settings": "{\"shareLookup\":{\"permissions\":[\"edit\"],\"lookup\":{\"filter\":[{\"version\":\"new\",\"source\":\"33\",\"lookup\":\"141\"},{\"version\":\"new\",\"source\":\"67\",\"lookup\":\"143\"}],\"entity\":{\"id\":\"21\",\"field\":\"145\"}}},\"instance\":{\"type\":\"instanceSelectionInstance\"}}"
+        }
+      }
+    ]
+  }
+}
