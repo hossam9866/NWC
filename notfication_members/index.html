@@ -3,49 +3,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="refresh">
+      <div class="loader"></div>
+      <div class="text">Updating</div>
+    </div>
+    <div class="loading">
+      <div class="loader"></div>
+    </div>
     <div class="title">
       <h2>NWC</h2>
     </div>
+    <div class="error"></div>
     <div class="container">
-      <table class="members">
-        <thead>
-          <tr class="members-row">
-            <th>Company</th>
-            <th>Position</th>
-            <th>Notification</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="members-row">
-            <td>Ahmed</td>
-            <td>Ahmed</td>
-            <td>
-              <table class="methods">
-                <tr>
-                  <td><span class="status received">&#x2714;</span> E-mail</td>
-                  <td>
-                    <span class="status confirmed">&#x2714;&#x2714;</span> SMS
-                  </td>
-                  <td><span class="status not-sent">&#x2716;</span> Voice</td>
-                </tr>
-                <tr>
-                  <td>Confirmed at 1-2-2023</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="specification">
-        <table>
-          <tr>
-            <td>Received <span class="status received">&#x2714;</span></td>
-            <td>
-              Confirmed <span class="status confirmed">&#x2714;&#x2714;</span>
-            </td>
-            <td>Not Sent <span class="status not-sent">&#x2716;</span></td>
-          </tr>
+      <div class="members-holder">
+        <table class="members">
+          <thead>
+            <tr class="members-row">
+              <th>Name</th>
+              <th>Queued Time</th>
+              <th>Notification</th>
+              <th>Confirmation Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
         </table>
+      </div>
+      <div class="specification-holder">
+        <div class="specification">
+          <table>
+            <tbody>
+              <tr>
+                <td>Received <span class="status received">✔</span></td>
+                <td>Confirmed <span class="status confirmed">✔✔</span></td>
+                <td>Not Sent <span class="status not-sent">✖</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <script src="app.js"></script>

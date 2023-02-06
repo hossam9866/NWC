@@ -12,7 +12,7 @@
       "contact": "2",
       "sent_email": 1,
       "sent_sms": 0,
-      "sent_voice": 0,
+      " ": 0,
       "sent_fax": 0,
       "queued_time": "2023-01-31T16:13:18+00:00"
     },
