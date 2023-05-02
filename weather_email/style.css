@@ -1,0 +1,133 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #596977;
+  background-image: url("https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/bg-cropped(1).png"),
+    url("https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/bg-cropped_1(1).png"),
+    url("https://app.cdc-hq-nwc.live//files/1000013/images/incident_email/bg-cropped(1).png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top left, center right, bottom left;
+  background-size: 300px 300px;
+}
+.logo-holder img {
+  width: 100%;
+}
+.level-icon img {
+  width: 150px;
+}
+.level-icon p {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+.cloud-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cloud-image img {
+  width: 70%;
+}
+.incident-info .intro {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.incident-info .alert-category {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.incident-info .alert-sub-category {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+.alert-area {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+.alert-area .business-unit {
+  text-align: end;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  margin: 0 20px;
+}
+.alert-area .cities {
+  color: #bfe0eb;
+  text-align: center;
+  margin: 0 20px;
+}
+.alert-date {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+}
+.alert-date .start-date,
+.alert-date .end-date {
+  width: 50%;
+}
+.alert-date .date-header {
+  text-align: end;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.date-line {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+.date-line img {
+  height: 25px;
+  margin: 0 10px;
+}
+.date-line p {
+  color: white;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background-color: #6b7f8f;
+  padding: 5px 0px;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+.contact img {
+  width: 25px;
+  margin-right: 10px;
+}
+.contact p {
+  font-size: 12px;
+  color: white;
+  margin: 0;
+}
