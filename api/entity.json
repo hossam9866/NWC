@@ -6,7 +6,7 @@
     "description": "NWC Incidents",
     "deleted": 0,
     "dateCreated": "2022-11-07T19:58:57+00:00",
-    "dateModified": "2023-01-18T13:14:45+00:00",
+    "dateModified": "2023-08-27T09:04:19+00:00",
     "fields": {
       "17": {
         "id": "17",
@@ -20,6 +20,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -44,6 +48,10 @@
         "stringMax": null,
         "enumId": 3,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -68,6 +76,10 @@
         "stringMax": null,
         "enumId": 5,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -92,6 +104,10 @@
         "stringMax": null,
         "enumId": 7,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -116,6 +132,10 @@
         "stringMax": null,
         "enumId": 9,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -140,6 +160,10 @@
         "stringMax": null,
         "enumId": 15,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -164,9 +188,13 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
-        "required": 1,
+        "required": 0,
         "indexed": 0,
         "deleted": 0,
         "regex": "",
@@ -188,6 +216,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -212,6 +244,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -227,7 +263,7 @@
       "41": {
         "id": "41",
         "entityId": "5",
-        "name": "Requires media release",
+        "name": "Requires Media Release",
         "dataType": "bool",
         "attribute": null,
         "integerMin": null,
@@ -236,6 +272,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -260,6 +300,10 @@
         "stringMax": null,
         "enumId": 17,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -284,6 +328,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -308,6 +356,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -332,6 +384,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -356,6 +412,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -371,7 +431,7 @@
       "65": {
         "id": "65",
         "entityId": "5",
-        "name": "Support from CDC required",
+        "name": "Support From CDC Required",
         "dataType": "bool",
         "attribute": null,
         "integerMin": null,
@@ -380,6 +440,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -395,7 +459,7 @@
       "67": {
         "id": "67",
         "entityId": "5",
-        "name": "City Business Unit",
+        "name": "Business Unit",
         "dataType": "enum",
         "attribute": null,
         "integerMin": null,
@@ -404,6 +468,10 @@
         "stringMax": null,
         "enumId": 19,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -428,6 +496,10 @@
         "stringMax": null,
         "enumId": 21,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 1,
@@ -452,9 +524,13 @@
         "stringMax": null,
         "enumId": 13,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
-        "required": 1,
+        "required": 0,
         "indexed": 0,
         "deleted": 0,
         "regex": "",
@@ -463,54 +539,6 @@
         "defaultValue": [],
         "sortable": false,
         "mergeTags": ["SERVICE SUBTYPE"]
-      },
-      "73": {
-        "id": "73",
-        "entityId": "5",
-        "name": "Incident Cause",
-        "dataType": "text",
-        "attribute": null,
-        "integerMin": null,
-        "integerMax": null,
-        "stringMin": null,
-        "stringMax": null,
-        "enumId": null,
-        "relatedEntityId": null,
-        "decimalMin": null,
-        "decimalMax": null,
-        "required": 0,
-        "indexed": 0,
-        "deleted": 0,
-        "regex": "",
-        "allowedCharset": "",
-        "sendingMedium": "",
-        "defaultValue": null,
-        "sortable": true,
-        "mergeTags": ["CAUSE"]
-      },
-      "75": {
-        "id": "75",
-        "entityId": "5",
-        "name": "Incident Category",
-        "dataType": "enum",
-        "attribute": null,
-        "integerMin": null,
-        "integerMax": null,
-        "stringMin": null,
-        "stringMax": null,
-        "enumId": 23,
-        "relatedEntityId": null,
-        "decimalMin": null,
-        "decimalMax": null,
-        "required": 0,
-        "indexed": 1,
-        "deleted": 0,
-        "regex": "",
-        "allowedCharset": "",
-        "sendingMedium": "",
-        "defaultValue": null,
-        "sortable": true,
-        "mergeTags": ["CATEGORY"]
       },
       "101": {
         "id": "101",
@@ -524,6 +552,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -548,6 +580,10 @@
         "stringMax": null,
         "enumId": null,
         "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
         "decimalMin": null,
         "decimalMax": null,
         "required": 0,
@@ -559,334 +595,1056 @@
         "defaultValue": "{%[uuid]%}",
         "sortable": true,
         "mergeTags": ["UUID"]
+      },
+      "153": {
+        "id": "153",
+        "entityId": "5",
+        "name": "Competent Agency",
+        "dataType": "text",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["COMPETENT_AGENCY"]
+      },
+      "157": {
+        "id": "157",
+        "entityId": "5",
+        "name": "Notify Water Regulator Required",
+        "dataType": "bool",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["WATER REGULATOR"]
+      },
+      "169": {
+        "id": "169",
+        "entityId": "5",
+        "name": "Image",
+        "dataType": "file",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "/.*\\..*/",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": "",
+        "sortable": false,
+        "mergeTags": ["IMAGE", "FILE ATTACHED"]
+      },
+      "173": {
+        "id": "173",
+        "entityId": "5",
+        "name": "Incident Cause",
+        "dataType": "enum",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 27,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["CAUSE"]
+      },
+      "181": {
+        "id": "181",
+        "entityId": "5",
+        "name": "First Classification",
+        "dataType": "enumMultiValue",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 29,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": [],
+        "sortable": false,
+        "mergeTags": ["FIRST CLASSIFICATION"]
+      },
+      "183": {
+        "id": "183",
+        "entityId": "5",
+        "name": "Second Classification",
+        "dataType": "enumMultiValue",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": 31,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": [],
+        "sortable": false,
+        "mergeTags": ["SECOND CLASSIFICATION"]
+      },
+      "203": {
+        "id": "203",
+        "entityId": "5",
+        "name": "Impacted Cities",
+        "dataType": "lookupMultiValue",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "lookupEntityId": 29,
+        "lookupFieldId": 225,
+        "lookupFilterFieldId": 197,
+        "lookupFilterValueId": 67,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": [],
+        "sortable": false,
+        "mergeTags": ["CITIES"]
+      },
+      "279": {
+        "id": "279",
+        "entityId": "5",
+        "name": "Extension Note",
+        "dataType": "text",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": "",
+        "sortable": true,
+        "mergeTags": ["EXTENSION NOTE"]
+      },
+      "285": {
+        "id": "285",
+        "entityId": "5",
+        "name": "Extend Title",
+        "dataType": "string",
+        "attribute": null,
+        "integerMin": null,
+        "integerMax": null,
+        "stringMin": null,
+        "stringMax": null,
+        "enumId": null,
+        "relatedEntityId": null,
+        "lookupEntityId": null,
+        "lookupFieldId": null,
+        "lookupFilterFieldId": null,
+        "lookupFilterValueId": null,
+        "decimalMin": null,
+        "decimalMax": null,
+        "required": 0,
+        "indexed": 0,
+        "deleted": 0,
+        "regex": "",
+        "allowedCharset": "",
+        "sendingMedium": "",
+        "defaultValue": null,
+        "sortable": true,
+        "mergeTags": ["EXTEND TITLE"]
       }
     },
     "enums": {
       "3": {
-        "5": "Emergency",
-        "7": "Scheduled"
+        "5": {
+          "value": "Emergency",
+          "translations": []
+        },
+        "7": {
+          "value": "Scheduled",
+          "translations": []
+        }
       },
       "5": {
-        "9": "Distribution",
-        "11": "Produce"
+        "9": {
+          "value": "Distribution",
+          "translations": []
+        },
+        "11": {
+          "value": "Production",
+          "translations": []
+        }
       },
       "7": {
-        "15": "1",
-        "17": "2",
-        "19": "3",
-        "21": "4",
-        "23": "5"
+        "15": {
+          "value": "1",
+          "translations": []
+        },
+        "17": {
+          "value": "2",
+          "translations": []
+        },
+        "19": {
+          "value": "3",
+          "translations": []
+        },
+        "21": {
+          "value": "4",
+          "translations": []
+        },
+        "23": {
+          "value": "5",
+          "translations": []
+        },
+        "153": {
+          "value": "Advanced",
+          "translations": []
+        },
+        "155": {
+          "value": "Emergency",
+          "translations": []
+        }
       },
       "9": {
-        "27": "Water",
-        "29": "Wastewater"
+        "27": {
+          "value": "Water",
+          "translations": []
+        },
+        "29": {
+          "value": "Wastewater",
+          "translations": []
+        }
       },
       "13": {
-        "39": "Maineline",
-        "41": "Network",
-        "43": "WTP",
-        "63": "Technical Issue",
-        "65": "Flood Points - Environmental Services",
-        "67": "STP Operational Status"
+        "39": {
+          "value": "Maineline",
+          "translations": []
+        },
+        "41": {
+          "value": "Network",
+          "translations": []
+        },
+        "43": {
+          "value": "WTP",
+          "translations": []
+        },
+        "63": {
+          "value": "Technical Issue",
+          "translations": []
+        },
+        "65": {
+          "value": "Flood Points - Environmental Services",
+          "translations": []
+        },
+        "67": {
+          "value": "STP Operational Status",
+          "translations": []
+        },
+        "143": {
+          "value": "Plants",
+          "translations": []
+        }
       },
       "15": {
-        "47": "Central Cluster",
-        "49": "Western Cluster",
-        "51": "Eastern Cluster",
-        "53": "Northern Cluster",
-        "55": "North Western Cluster",
-        "61": "Southern Cluster"
+        "47": {
+          "value": "Central Cluster",
+          "translations": []
+        },
+        "49": {
+          "value": "Western Cluster",
+          "translations": []
+        },
+        "51": {
+          "value": "Eastern Cluster",
+          "translations": []
+        },
+        "53": {
+          "value": "Northern Cluster",
+          "translations": []
+        },
+        "55": {
+          "value": "Northwestern Cluster",
+          "translations": []
+        },
+        "61": {
+          "value": "Southern Cluster",
+          "translations": []
+        },
+        "239": {
+          "value": "TEST",
+          "translations": []
+        }
       },
       "17": {
-        "57": "Open",
-        "59": "Closed"
+        "57": {
+          "value": "Open",
+          "translations": []
+        },
+        "59": {
+          "value": "Closed",
+          "translations": []
+        },
+        "221": {
+          "value": "Canceled",
+          "translations": []
+        }
       },
       "19": {
-        "71": "Riyadh Business Unit",
-        "73": "Northern Cities Business Unit",
-        "75": "Southern Cities Business Unit",
-        "77": "Western Cities Business Unit",
-        "79": "Jeddah Business Unit",
-        "81": "Makkah Business Unit",
-        "83": "Taif Business Unit",
-        "85": "Al-Mashair Business Unit",
-        "87": "Dammam",
-        "89": "Al-Qassim",
-        "91": "Hail",
-        "93": "Northern borders",
-        "95": "Al Jouf",
-        "97": "Medina",
-        "99": "Tabuk",
-        "101": "Assir",
-        "103": "Al Baha",
-        "105": "Jazan",
-        "107": "Najran"
+        "71": {
+          "value": "CC Riyadh",
+          "translations": []
+        },
+        "73": {
+          "value": "Northern Cities",
+          "translations": []
+        },
+        "75": {
+          "value": "Southern Cities",
+          "translations": []
+        },
+        "77": {
+          "value": "Western Cities",
+          "translations": []
+        },
+        "79": {
+          "value": "Jeddah",
+          "translations": []
+        },
+        "81": {
+          "value": "Makkah",
+          "translations": []
+        },
+        "83": {
+          "value": "Taif",
+          "translations": []
+        },
+        "85": {
+          "value": "Al Mashair",
+          "translations": []
+        },
+        "87": {
+          "value": "Central Cities",
+          "translations": []
+        },
+        "89": {
+          "value": "Al Qasim",
+          "translations": []
+        },
+        "91": {
+          "value": "Hail",
+          "translations": []
+        },
+        "93": {
+          "value": "Northern Borders",
+          "translations": []
+        },
+        "95": {
+          "value": "Al Jowf",
+          "translations": []
+        },
+        "97": {
+          "value": "Al Madinah",
+          "translations": []
+        },
+        "99": {
+          "value": "Tabuk",
+          "translations": []
+        },
+        "101": {
+          "value": "Aseer",
+          "translations": []
+        },
+        "103": {
+          "value": "Al Bahah",
+          "translations": []
+        },
+        "105": {
+          "value": "Jazan",
+          "translations": []
+        },
+        "107": {
+          "value": "Najran",
+          "translations": []
+        },
+        "240": {
+          "value": "TEST",
+          "translations": []
+        },
+        "244": {
+          "value": "CC North",
+          "translations": []
+        },
+        "245": {
+          "value": "CC South",
+          "translations": []
+        },
+        "246": {
+          "value": "CC West",
+          "translations": []
+        }
       },
       "21": {
-        "109": "Internal",
-        "111": "External"
+        "109": {
+          "value": "Internal",
+          "translations": []
+        },
+        "111": {
+          "value": "External",
+          "translations": []
+        }
       },
-      "23": {
-        "113": "Fuel Shortage or Outage",
-        "115": "Power Outage",
-        "117": "Industrial Accident",
-        "119": "Water Outage",
-        "121": "Terrorist Act",
-        "123": "Oil Spill",
-        "125": "Serious Leakage",
-        "127": "Explosion",
-        "129": "Fire",
-        "131": "Diseases (Plant/Animal)",
-        "133": "Other"
+      "27": {
+        "157": {
+          "value": "Breakage",
+          "translations": []
+        },
+        "163": {
+          "value": "Fire",
+          "translations": []
+        },
+        "165": {
+          "value": "Isolation",
+          "translations": []
+        },
+        "167": {
+          "value": "Leakage",
+          "translations": []
+        },
+        "171": {
+          "value": "Maintenance",
+          "translations": []
+        },
+        "173": {
+          "value": "Oil Spil",
+          "translations": []
+        },
+        "175": {
+          "value": "Pollution",
+          "translations": []
+        },
+        "177": {
+          "value": "Power Outage",
+          "translations": []
+        },
+        "187": {
+          "value": "SWCC Shutdown",
+          "translations": []
+        },
+        "195": {
+          "value": "Others",
+          "translations": []
+        },
+        "219": {
+          "value": "Electrical issue",
+          "translations": []
+        }
+      },
+      "29": {
+        "199": {
+          "value": "أمطار متوسطة",
+          "translations": []
+        },
+        "201": {
+          "value": "أمطار متوسطة الي غزيرة",
+          "translations": []
+        },
+        "203": {
+          "value": "أتربة مثارة",
+          "translations": []
+        },
+        "205": {
+          "value": "عواصف رعدية مصحوبة بأمطار غزيرة",
+          "translations": []
+        },
+        "207": {
+          "value": "أمطار غزيرة",
+          "translations": []
+        }
+      },
+      "31": {
+        "209": {
+          "value": "نشاط في الرياح السطحية",
+          "translations": []
+        },
+        "211": {
+          "value": "تساقط البرد",
+          "translations": []
+        },
+        "213": {
+          "value": "سيول",
+          "translations": []
+        },
+        "215": {
+          "value": "تدني في مدى الرؤية",
+          "translations": []
+        },
+        "217": {
+          "value": "شبه انعدام في مدى الرؤية",
+          "translations": []
+        },
+        "241": {
+          "value": "جريان السيول",
+          "translations": []
+        },
+        "242": {
+          "value": "رياح نشطة",
+          "translations": []
+        },
+        "243": {
+          "value": "شبه انعدام في مدى الرؤية الأفقية",
+          "translations": []
+        },
+        "247": {
+          "value": "انعدام في مدى الرؤية الأفقية",
+          "translations": []
+        },
+        "248": {
+          "value": "ارتفاع الأمواج",
+          "translations": []
+        },
+        "251": {
+          "value": "رياح شديدة السرعة",
+          "translations": []
+        },
+        "252": {
+          "value": "صواعق رعدية",
+          "translations": []
+        }
       }
     },
     "enumOptions": {
       "3": [
         {
           "id": 5,
-          "name": "Emergency"
+          "name": "Emergency",
+          "translations": []
         },
         {
           "id": 7,
-          "name": "Scheduled"
+          "name": "Scheduled",
+          "translations": []
         }
       ],
       "5": [
         {
           "id": 9,
-          "name": "Distribution"
+          "name": "Distribution",
+          "translations": []
         },
         {
           "id": 11,
-          "name": "Produce"
+          "name": "Production",
+          "translations": []
         }
       ],
       "7": [
         {
           "id": 15,
-          "name": "1"
+          "name": "1",
+          "translations": []
         },
         {
           "id": 17,
-          "name": "2"
+          "name": "2",
+          "translations": []
         },
         {
           "id": 19,
-          "name": "3"
+          "name": "3",
+          "translations": []
         },
         {
           "id": 21,
-          "name": "4"
+          "name": "4",
+          "translations": []
         },
         {
           "id": 23,
-          "name": "5"
+          "name": "5",
+          "translations": []
+        },
+        {
+          "id": 153,
+          "name": "Advanced",
+          "translations": []
+        },
+        {
+          "id": 155,
+          "name": "Emergency",
+          "translations": []
         }
       ],
       "9": [
         {
           "id": 27,
-          "name": "Water"
+          "name": "Water",
+          "translations": []
         },
         {
           "id": 29,
-          "name": "Wastewater"
+          "name": "Wastewater",
+          "translations": []
         }
       ],
       "13": [
         {
           "id": 39,
-          "name": "Maineline"
+          "name": "Maineline",
+          "translations": []
         },
         {
           "id": 41,
-          "name": "Network"
+          "name": "Network",
+          "translations": []
         },
         {
           "id": 43,
-          "name": "WTP"
+          "name": "WTP",
+          "translations": []
         },
         {
           "id": 63,
-          "name": "Technical Issue"
+          "name": "Technical Issue",
+          "translations": []
         },
         {
           "id": 65,
-          "name": "Flood Points - Environmental Services"
+          "name": "Flood Points - Environmental Services",
+          "translations": []
         },
         {
           "id": 67,
-          "name": "STP Operational Status"
+          "name": "STP Operational Status",
+          "translations": []
+        },
+        {
+          "id": 143,
+          "name": "Plants",
+          "translations": []
         }
       ],
       "15": [
         {
           "id": 47,
-          "name": "Central Cluster"
+          "name": "Central Cluster",
+          "translations": []
         },
         {
           "id": 49,
-          "name": "Western Cluster"
+          "name": "Western Cluster",
+          "translations": []
         },
         {
           "id": 51,
-          "name": "Eastern Cluster"
+          "name": "Eastern Cluster",
+          "translations": []
         },
         {
           "id": 53,
-          "name": "Northern Cluster"
+          "name": "Northern Cluster",
+          "translations": []
         },
         {
           "id": 55,
-          "name": "North Western Cluster"
+          "name": "Northwestern Cluster",
+          "translations": []
         },
         {
           "id": 61,
-          "name": "Southern Cluster"
+          "name": "Southern Cluster",
+          "translations": []
+        },
+        {
+          "id": 239,
+          "name": "TEST",
+          "translations": []
         }
       ],
       "17": [
         {
           "id": 57,
-          "name": "Open"
+          "name": "Open",
+          "translations": []
         },
         {
           "id": 59,
-          "name": "Closed"
+          "name": "Closed",
+          "translations": []
+        },
+        {
+          "id": 221,
+          "name": "Canceled",
+          "translations": []
         }
       ],
       "19": [
         {
           "id": 71,
-          "name": "Riyadh Business Unit"
+          "name": "CC Riyadh",
+          "translations": []
         },
         {
           "id": 73,
-          "name": "Northern Cities Business Unit"
+          "name": "Northern Cities",
+          "translations": []
         },
         {
           "id": 75,
-          "name": "Southern Cities Business Unit"
+          "name": "Southern Cities",
+          "translations": []
         },
         {
           "id": 77,
-          "name": "Western Cities Business Unit"
+          "name": "Western Cities",
+          "translations": []
         },
         {
           "id": 79,
-          "name": "Jeddah Business Unit"
+          "name": "Jeddah",
+          "translations": []
         },
         {
           "id": 81,
-          "name": "Makkah Business Unit"
+          "name": "Makkah",
+          "translations": []
         },
         {
           "id": 83,
-          "name": "Taif Business Unit"
+          "name": "Taif",
+          "translations": []
         },
         {
           "id": 85,
-          "name": "Al-Mashair Business Unit"
+          "name": "Al Mashair",
+          "translations": []
         },
         {
           "id": 87,
-          "name": "Dammam"
+          "name": "Central Cities",
+          "translations": []
         },
         {
           "id": 89,
-          "name": "Al-Qassim"
+          "name": "Al Qasim",
+          "translations": []
         },
         {
           "id": 91,
-          "name": "Hail"
+          "name": "Hail",
+          "translations": []
         },
         {
           "id": 93,
-          "name": "Northern borders"
+          "name": "Northern Borders",
+          "translations": []
         },
         {
           "id": 95,
-          "name": "Al Jouf"
+          "name": "Al Jowf",
+          "translations": []
         },
         {
           "id": 97,
-          "name": "Medina"
+          "name": "Al Madinah",
+          "translations": []
         },
         {
           "id": 99,
-          "name": "Tabuk"
+          "name": "Tabuk",
+          "translations": []
         },
         {
           "id": 101,
-          "name": "Assir"
+          "name": "Aseer",
+          "translations": []
         },
         {
           "id": 103,
-          "name": "Al Baha"
+          "name": "Al Bahah",
+          "translations": []
         },
         {
           "id": 105,
-          "name": "Jazan"
+          "name": "Jazan",
+          "translations": []
         },
         {
           "id": 107,
-          "name": "Najran"
+          "name": "Najran",
+          "translations": []
+        },
+        {
+          "id": 240,
+          "name": "TEST",
+          "translations": []
+        },
+        {
+          "id": 244,
+          "name": "CC North",
+          "translations": []
+        },
+        {
+          "id": 245,
+          "name": "CC South",
+          "translations": []
+        },
+        {
+          "id": 246,
+          "name": "CC West",
+          "translations": []
         }
       ],
       "21": [
         {
           "id": 109,
-          "name": "Internal"
+          "name": "Internal",
+          "translations": []
         },
         {
           "id": 111,
-          "name": "External"
+          "name": "External",
+          "translations": []
         }
       ],
-      "23": [
+      "27": [
         {
-          "id": 113,
-          "name": "Fuel Shortage or Outage"
+          "id": 157,
+          "name": "Breakage",
+          "translations": []
         },
         {
-          "id": 115,
-          "name": "Power Outage"
+          "id": 163,
+          "name": "Fire",
+          "translations": []
         },
         {
-          "id": 117,
-          "name": "Industrial Accident"
+          "id": 165,
+          "name": "Isolation",
+          "translations": []
         },
         {
-          "id": 119,
-          "name": "Water Outage"
+          "id": 167,
+          "name": "Leakage",
+          "translations": []
         },
         {
-          "id": 121,
-          "name": "Terrorist Act"
+          "id": 171,
+          "name": "Maintenance",
+          "translations": []
         },
         {
-          "id": 123,
-          "name": "Oil Spill"
+          "id": 173,
+          "name": "Oil Spil",
+          "translations": []
         },
         {
-          "id": 125,
-          "name": "Serious Leakage"
+          "id": 175,
+          "name": "Pollution",
+          "translations": []
         },
         {
-          "id": 127,
-          "name": "Explosion"
+          "id": 177,
+          "name": "Power Outage",
+          "translations": []
         },
         {
-          "id": 129,
-          "name": "Fire"
+          "id": 187,
+          "name": "SWCC Shutdown",
+          "translations": []
         },
         {
-          "id": 131,
-          "name": "Diseases (Plant/Animal)"
+          "id": 195,
+          "name": "Others",
+          "translations": []
         },
         {
-          "id": 133,
-          "name": "Other"
+          "id": 219,
+          "name": "Electrical issue",
+          "translations": []
+        }
+      ],
+      "29": [
+        {
+          "id": 199,
+          "name": "أمطار متوسطة",
+          "translations": []
+        },
+        {
+          "id": 201,
+          "name": "أمطار متوسطة الي غزيرة",
+          "translations": []
+        },
+        {
+          "id": 203,
+          "name": "أتربة مثارة",
+          "translations": []
+        },
+        {
+          "id": 205,
+          "name": "عواصف رعدية مصحوبة بأمطار غزيرة",
+          "translations": []
+        },
+        {
+          "id": 207,
+          "name": "أمطار غزيرة",
+          "translations": []
+        }
+      ],
+      "31": [
+        {
+          "id": 209,
+          "name": "نشاط في الرياح السطحية",
+          "translations": []
+        },
+        {
+          "id": 211,
+          "name": "تساقط البرد",
+          "translations": []
+        },
+        {
+          "id": 213,
+          "name": "سيول",
+          "translations": []
+        },
+        {
+          "id": 215,
+          "name": "تدني في مدى الرؤية",
+          "translations": []
+        },
+        {
+          "id": 217,
+          "name": "شبه انعدام في مدى الرؤية",
+          "translations": []
+        },
+        {
+          "id": 241,
+          "name": "جريان السيول",
+          "translations": []
+        },
+        {
+          "id": 242,
+          "name": "رياح نشطة",
+          "translations": []
+        },
+        {
+          "id": 243,
+          "name": "شبه انعدام في مدى الرؤية الأفقية",
+          "translations": []
+        },
+        {
+          "id": 247,
+          "name": "انعدام في مدى الرؤية الأفقية",
+          "translations": []
+        },
+        {
+          "id": 248,
+          "name": "ارتفاع الأمواج",
+          "translations": []
+        },
+        {
+          "id": 251,
+          "name": "رياح شديدة السرعة",
+          "translations": []
+        },
+        {
+          "id": 252,
+          "name": "صواعق رعدية",
+          "translations": []
         }
       ]
     },
@@ -898,9 +1656,61 @@
       "13": "Service - Sub Type Options",
       "15": "Cluster",
       "17": "Incident Status",
-      "19": "City Business Unit",
+      "19": "Business Unit",
       "21": "Incident Type",
-      "23": "Incident Category"
+      "27": "Incident Cause",
+      "29": "First Classification",
+      "31": "Second Classification"
+    },
+    "enumLanguages": {
+      "3": {
+        "default": null,
+        "options": []
+      },
+      "5": {
+        "default": null,
+        "options": []
+      },
+      "7": {
+        "default": null,
+        "options": []
+      },
+      "9": {
+        "default": null,
+        "options": []
+      },
+      "13": {
+        "default": null,
+        "options": []
+      },
+      "15": {
+        "default": null,
+        "options": []
+      },
+      "17": {
+        "default": null,
+        "options": []
+      },
+      "19": {
+        "default": null,
+        "options": []
+      },
+      "21": {
+        "default": null,
+        "options": []
+      },
+      "27": {
+        "default": null,
+        "options": []
+      },
+      "29": {
+        "default": null,
+        "options": []
+      },
+      "31": {
+        "default": null,
+        "options": []
+      }
     },
     "attributes": {
       "name": "17"
@@ -911,7 +1721,7 @@
     "iconColor": null,
     "iconFilter": [],
     "createForm": "1",
-    "updateForm": "",
+    "updateForm": "9",
     "permissions": {
       "edit entity": true,
       "delete entity": true,
