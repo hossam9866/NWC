@@ -141,6 +141,12 @@ main {
 .section2 .card p {
   max-width: 550px;
 }
+@media (max-width: 1150px) {
+  .section2 .card {
+    max-width: 520px;
+    padding: 40px 70px 40px 20px;
+  }
+}
 
 /*End: section 2*/
 
@@ -174,6 +180,15 @@ main {
   max-width: 900px;
   text-align: center !important;
 }
+@media (max-width: 1000px) {
+  .section3 .card .pargraph-normal {
+    max-width: none;
+  }
+  .section3 .card {
+    max-width: 90%;
+    padding: 40px 40px;
+  }
+}
 
 /*End: section 3*/
 
@@ -200,6 +215,15 @@ main {
 }
 .section4 .card .pargraph-normal {
   max-width: 530px;
+}
+@media (max-width: 1200px) {
+  .section4 .card {
+    padding-right: 70px;
+    max-width: 400px;
+  }
+  .section4 .line {
+    width: 70px;
+  }
 }
 
 /*End: section 4*/
@@ -261,6 +285,15 @@ main {
   text-align: center !important;
 }
 
+@media (max-width: 1000px) {
+  .section6 .card .pargraph-normal {
+    max-width: none;
+  }
+  .section6 .card {
+    max-width: 90%;
+    padding: 40px 40px;
+  }
+}
 /*End: section 6*/
 
 /*section 7*/
