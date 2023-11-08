@@ -226,6 +226,7 @@ main {
 /*section 5*/
 .section5 {
   justify-content: space-evenly;
+  max-height: 800px;
 }
 .section5 .card {
   background-color: transparent;
@@ -295,6 +296,7 @@ main {
 /*section 7*/
 .section7 {
   justify-content: space-between;
+  max-height: 800px;
 }
 .section7 .card {
   background-color: transparent;
