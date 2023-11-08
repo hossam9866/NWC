@@ -1,0 +1,288 @@
+@font-face {
+  font-family: "bastoni"; /* Give your font a name */
+  src: url("fonts/Bastoni.otf") format("opentype"); /* Provide the path to your OTF file */
+}
+
+:root {
+  --primary-color: #b86f58;
+  --background-color: #f6e6e1;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "bastoni", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title-bold {
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.pargraph-normal {
+  color: black;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}
+
+.section-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+.section-flex-reverse {
+  justify-content: end;
+}
+
+.line {
+  width: 100px;
+  border-bottom: 2px solid var(--primary-color);
+  position: absolute;
+}
+.border-white {
+  border-color: white;
+}
+.card {
+  background-color: var(--background-color);
+  max-width: 540px;
+  padding: 80px 40px;
+}
+.card h2 {
+  margin-bottom: 60px;
+}
+.space {
+  margin: 170px 0px;
+}
+body {
+  background-color: rgb(250, 250, 250);
+}
+main {
+  max-width: 1350px;
+  margin: 0px auto;
+  background-color: white;
+}
+@media (max-width: 1200px) {
+  .title-bold {
+    font-size: 36px;
+  }
+  .pargraph-normal {
+    font-size: 14px;
+  }
+  .card {
+    max-width: 420px;
+    padding: 40px 20px;
+  }
+  .line {
+    width: 70px;
+  }
+}
+/*section 1*/
+.section1 {
+  background-image: url("images/bg1.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  background-size: auto 100%;
+  padding: 0px 0px;
+  height: 680px;
+}
+.section1 .card {
+  padding-left: 120px;
+}
+.section1 .line {
+  top: 148px;
+}
+@media (max-width: 1200px) {
+  .section1 .card {
+    padding-left: 90px;
+  }
+}
+@media (max-width: 1000px) {
+  .section1 {
+    padding: 40px 0px;
+    background-size: 80% auto;
+    height: auto;
+  }
+}
+
+/*End: section 1*/
+
+/*section 2*/
+.section2 {
+  background-image: url("images/bg2.png");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: auto 100%;
+  padding: 0px 0px;
+  height: 650px;
+}
+.section2 .card {
+  max-width: 700px;
+  padding: 80px 100px;
+}
+.section2 .line {
+  top: 145px;
+}
+.section2 .card p {
+  max-width: 550px;
+}
+
+/*End: section 2*/
+
+/*section 3*/
+.section3 {
+  background-image: url("images/bg3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 0px 0px;
+  height: 850px;
+  align-items: end;
+}
+.section3 .card {
+  max-width: 90%;
+  padding: 40px 250px;
+  margin: 0px auto;
+  transform: translateY(50%);
+  box-sizing: border-box;
+}
+.section3 .title-bold {
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  max-width: 650px;
+}
+.section3 .line {
+  top: 125px;
+}
+.section3 .card .pargraph-normal {
+  max-width: 900px;
+  text-align: center !important;
+}
+
+/*End: section 3*/
+
+/*section 4*/
+.section4 {
+  background-image: url("images/bg4.png");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: auto 100%;
+  padding: 0px 0px;
+  height: 800px;
+}
+.section4 .card {
+  background-color: transparent;
+  margin-right: 0px;
+  max-width: 650px;
+}
+.section4 .title-bold {
+  margin-bottom: 100px;
+}
+.section4 .line {
+  width: 100px;
+  top: 135px;
+}
+.section4 .card .pargraph-normal {
+  max-width: 530px;
+}
+
+/*End: section 4*/
+
+/*section 5*/
+.section5 {
+  justify-content: space-evenly;
+}
+.section5 .card {
+  background-color: transparent;
+  margin-left: 70px;
+  max-width: 700px;
+}
+.section5 .title-bold {
+  margin-bottom: 50px;
+}
+.section5 .line {
+  left: 0px;
+}
+.section5 .card .pargraph-normal {
+  max-width: 500px;
+}
+.section5 .section-image img {
+  height: 550px;
+}
+
+/*End: section 5*/
+
+/*section 6*/
+.section6 {
+  background-image: url("images/bg6.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 0px 0px;
+  height: 850px;
+  align-items: end;
+}
+.section6 .card {
+  max-width: 90%;
+  padding: 40px 250px;
+  margin: 0px auto;
+  transform: translateY(50%);
+  box-sizing: border-box;
+}
+.section6 .title-bold {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 650px;
+  text-align: center;
+}
+.section6 .line {
+  top: 125px;
+}
+.section6 .card .pargraph-normal {
+  max-width: 900px;
+  text-align: center !important;
+}
+
+/*End: section 6*/
+
+/*section 7*/
+.section7 {
+  justify-content: space-between;
+}
+.section7 .card {
+  background-color: transparent;
+  margin-left: 70px;
+  max-width: 700px;
+}
+.section7 .title-bold {
+  margin-bottom: 50px;
+}
+.section7 .line {
+  left: 0px;
+}
+.section7 .card .pargraph-normal {
+  max-width: 500px;
+}
+.section7 .section-image img {
+  width: 600px;
+}
+
+/*End: section 7*/
