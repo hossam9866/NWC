@@ -79,10 +79,10 @@ main {
 }
 @media (max-width: 1200px) {
   .title-bold {
-    font-size: 36px;
+    font-size: 36px !important;
   }
   .pargraph-normal {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .card {
     max-width: 420px;
@@ -245,10 +245,6 @@ main {
   height: 550px;
 }
 @media (max-width: 1200px) {
-  .section5 .section-image img {
-    height: auto;
-    width: 400px;
-  }
 }
 /*End: section 5*/
 
@@ -318,8 +314,5 @@ main {
   width: 600px;
 }
 @media (max-width: 1200px) {
-  .section7 .section-image img {
-    width: 400px;
-  }
 }
 /*End: section 7*/
