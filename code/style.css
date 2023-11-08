@@ -249,7 +249,12 @@ main {
 .section5 .section-image img {
   height: 550px;
 }
-
+@media (max-width: 1200px) {
+  .section5 .section-image img {
+    height: auto;
+    width: 400px;
+  }
+}
 /*End: section 5*/
 
 /*section 6*/
@@ -317,5 +322,9 @@ main {
 .section7 .section-image img {
   width: 600px;
 }
-
+@media (max-width: 1200px) {
+  .section7 .section-image img {
+    width: 400px;
+  }
+}
 /*End: section 7*/
