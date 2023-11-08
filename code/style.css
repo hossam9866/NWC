@@ -113,11 +113,6 @@ main {
   }
 }
 @media (max-width: 1000px) {
-  .section1 {
-    padding: 40px 0px;
-    background-size: 80% auto;
-    height: auto;
-  }
 }
 
 /*End: section 1*/
