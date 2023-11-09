@@ -8,7 +8,10 @@ window.onload = () => {
       const titlePosTop = titleElement.getBoundingClientRect().top;
       const sectionPosTop = sectionElement.getBoundingClientRect().top;
       let linePosTop = Math.abs(titlePosTop - sectionPosTop);
-      lineElement.style.top = `${linePosTop + 22}px`;
+      var computedHeadStyle = window.getComputedStyle(titleElement);
+      var headerFontSize = computedHeadStyle.getPropertyValue("font-size");
+      headerFontSize = parseInt(headerFontSize);
+      lineElement.style.top = `${linePosTop + headerFontSize / 2}px`;
     });
   }
 

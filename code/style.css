@@ -79,10 +79,10 @@ main {
 }
 @media (max-width: 1200px) {
   .title-bold {
-    font-size: 36px !important;
+    font-size: 36px;
   }
   .pargraph-normal {
-    font-size: 14px !important;
+    font-size: 14px;
   }
   .card {
     max-width: 420px;
@@ -90,6 +90,20 @@ main {
   }
   .line {
     width: 70px;
+  }
+  .section-flex {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .title-bold {
+    font-size: 26px;
+  }
+  .pargraph-normal {
+    font-size: 14px;
+  }
+  .section-flex {
+    margin-bottom: 40px;
   }
 }
 /*section 1*/
@@ -112,7 +126,36 @@ main {
     padding-left: 90px;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 910px) {
+  .section1 {
+    padding: 40px 0px;
+  }
+}
+@media (max-width: 850px) {
+  .section1 {
+    padding: 10px 0px;
+    background-size: 90% auto;
+    align-items: end;
+    height: 750px;
+  }
+  .section1 .card {
+    padding-left: 90px;
+    max-width: 320px;
+  }
+
+  .section1 .line {
+    top: 118px;
+  }
+}
+@media (max-width: 500px) {
+  .section1 {
+    padding: 30px 0px;
+    background-size: 100% auto;
+    height: 780px;
+  }
+  .section1 .card {
+    max-width: none;
+  }
 }
 
 /*End: section 1*/
@@ -136,10 +179,33 @@ main {
 .section2 .card p {
   max-width: 550px;
 }
-@media (max-width: 1150px) {
+
+@media (max-width: 1200px) {
   .section2 .card {
     max-width: 520px;
     padding: 40px 70px 40px 20px;
+  }
+}
+@media (max-width: 910px) {
+  .section2 {
+    background-size: 90% auto;
+    align-items: end;
+    height: 850px;
+  }
+  .section2 .card {
+    max-width: 420px;
+  }
+  .section2 .title-bold {
+    font-size: 26px;
+  }
+}
+@media (max-width: 500px) {
+  .section2 {
+    background-size: 100% auto;
+    height: 850px;
+  }
+  .section2 .card {
+    max-width: none;
   }
 }
 
@@ -176,12 +242,29 @@ main {
   text-align: center !important;
 }
 @media (max-width: 1000px) {
+  .section3 {
+    background-size: cover;
+    height: 650px;
+  }
   .section3 .card .pargraph-normal {
     max-width: none;
   }
   .section3 .card {
     max-width: 90%;
     padding: 40px 40px;
+  }
+  .section3 .line {
+    width: 40px;
+  }
+}
+@media (max-width: 915px) {
+  .section3 {
+    height: 550px;
+  }
+  .section3 .title-bold {
+    font-size: 25px;
+    top: 30px;
+    left: 50px;
   }
 }
 
@@ -220,7 +303,32 @@ main {
     width: 70px;
   }
 }
-
+@media (max-width: 1000px) {
+  .section4 {
+    background-size: 100% auto;
+    height: 1000px;
+    align-items: end;
+  }
+  .section4 .card {
+    background-color: var(--background-color);
+    margin-right: 0px;
+    max-width: 450px;
+  }
+  .section4 .title-bold {
+    margin-bottom: 60px;
+  }
+  .section4 .card {
+    padding-right: 50px;
+  }
+  .section4 .line {
+    width: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .section4 .card .pargraph-normal {
+    max-width: none;
+  }
+}
 /*End: section 4*/
 
 /*section 5*/
@@ -245,7 +353,24 @@ main {
 .section5 .section-image img {
   height: 550px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
+  .section5 {
+    max-height: none;
+    flex-direction: column;
+  }
+  .section5 .section-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+  }
+}
+@media (max-width: 700px) {
+  .section5 .line {
+    width: 40px;
+  }
+  .section5 .card {
+    margin-left: 40px;
+  }
 }
 /*End: section 5*/
 
@@ -283,12 +408,42 @@ main {
 }
 
 @media (max-width: 1000px) {
+  .section6 {
+    background-size: cover;
+    height: 550px;
+  }
   .section6 .card .pargraph-normal {
     max-width: none;
   }
   .section6 .card {
     max-width: 90%;
     padding: 40px 40px;
+  }
+  .section6 .line {
+    width: 40px;
+  }
+  .section6 .card .pargraph-normal {
+    max-width: none;
+  }
+  .section6 .card {
+    max-width: 90%;
+    padding: 40px 40px;
+  }
+}
+@media (max-width: 915px) {
+  .section6 {
+    height: 500px;
+  }
+  .section6 .title-bold {
+    font-size: 25px;
+    top: 30px;
+    max-width: none;
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .section6 .card {
+    transform: translateY(40%);
   }
 }
 /*End: section 6*/
@@ -315,6 +470,23 @@ main {
 .section7 .section-image img {
   width: 600px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
+  .section7 {
+    max-height: none;
+    flex-direction: column;
+  }
+  .section7 .section-image img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+  }
+}
+@media (max-width: 700px) {
+  .section7 .line {
+    width: 40px;
+  }
+  .section7 .card {
+    margin-left: 40px;
+  }
 }
 /*End: section 7*/
