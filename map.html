@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locations Map (URL Param)</title>
+
+    <!-- ✅ ArcGIS CSS (normal link) -->
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.29/esri/themes/light/main.css"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      #viewDiv {
+        height: 100%;
+        width: 100%;
+      }
+      #msg {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        max-width: 360px;
+        white-space: pre-wrap;
+      }
+    </style>
+
+    <!-- ✅ ArcGIS JS (normal script) -->
+    <script src="https://js.arcgis.com/4.29/"></script>
+  </head>
+
+  <body>
+    <div id="msg">Reading locations from URL…</div>
+    <div id="viewDiv"></div>
+
+    <script>
+      /**
+       * ================================
+       * URL PARAMS (for iframe usage)
+       * ================================
+       * Required:
+       * - locations=...  (URL-encoded JSON)
+       *
+       * Optional:
+       * - basemap=streets-vector
+       * - zoom=6
+       * - center=47,25  (lon,lat)
+       *
+       * Example:
+       * map.html?basemap=streets-vector&zoom=6&center=47,25&locations=%5B%7B%22name%22%3A%22A%22%2C%22points%22%3A%5B%5B45.93%2C25.02%5D%2C%5B46.59%2C24.52%5D%2C%5B46.52%2C25.22%5D%5D%7D%5D
+       */
+
+      const msgEl = document.getElementById("msg");
+
+      function setMsg(text) {
+        msgEl.textContent = text;
+      }
+
+      function parseCenter(str, fallback) {
+        if (!str) return fallback;
+        const parts = str.split(",").map((x) => Number(x.trim()));
+        if (parts.length !== 2 || !Number.isFinite(parts[0]) || !Number.isFinite(parts[1]))
+          return fallback;
+        return [parts[0], parts[1]];
+      }
+
+      function safeParseLocations(paramValue) {
+        if (!paramValue) return [];
+        try {
+          // URLSearchParams already decodes once, but if you double-encoded, this helps:
+          const text = paramValue.trim();
+          return JSON.parse(text);
+        } catch (e1) {
+          try {
+            return JSON.parse(decodeURIComponent(paramValue));
+          } catch (e2) {
+            return [];
+          }
+        }
+      }
+
+      const sp = new URLSearchParams(location.search);
+
+      const basemap = sp.get("basemap") || "streets-vector";
+      const zoom = Number(sp.get("zoom") || "6");
+      const center = parseCenter(sp.get("center"), [47, 25]);
+
+      // ✅ locations must be JSON string array
+      // Each item example:
+      // { name, points:[[lon,lat],...], fill:"#000000", outline:"#000000", opacity:20 }
+      const locationsParam = sp.get("locations");
+      const locations = safeParseLocations(locationsParam);
+
+      // Filter valid polygons
+      const validLocations = Array.isArray(locations)
+        ? locations.filter((l) => l && Array.isArray(l.points) && l.points.length >= 3)
+        : [];
+
+      setMsg(
+        `basemap: ${basemap}\nzoom: ${zoom}\ncenter: ${center.join(",")}\nlocations: ${validLocations.length}/${Array.isArray(locations) ? locations.length : 0}`
+      );
+
+      // =========================
+      // ArcGIS Map
+      // =========================
+      require(
+        [
+          "esri/Map",
+          "esri/views/MapView",
+          "esri/Graphic",
+          "esri/geometry/Polygon",
+          "esri/geometry/Extent",
+        ],
+        function (Map, MapView, Graphic, Polygon, Extent) {
+          if (validLocations.length === 0) {
+            setMsg(msgEl.textContent + "\n\n❌ No valid locations found in URL param.");
+            return;
+          }
+
+          function hexToRgba(hex, opacity = 35) {
+            let h = String(hex || "#2f6f9e").replace("#", "");
+            if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+            const r = parseInt(h.substring(0, 2) || "00", 16);
+            const g = parseInt(h.substring(2, 4) || "00", 16);
+            const b = parseInt(h.substring(4, 6) || "00", 16);
+            const a = Math.max(0, Math.min(1, (Number(opacity) || 35) / 100));
+            return `rgba(${r},${g},${b},${a})`;
+          }
+
+          const map = new Map({ basemap });
+          const view = new MapView({
+            container: "viewDiv",
+            map,
+            zoom: Number.isFinite(zoom) ? zoom : 6,
+            center,
+          });
+
+          view.when(async () => {
+            const graphics = [];
+
+            validLocations.forEach((loc, i) => {
+              const ring = loc.points.map((p) => [Number(p[0]), Number(p[1])]);
+
+              // close ring
+              const first = ring[0];
+              const last = ring[ring.length - 1];
+              if (first && last && (first[0] !== last[0] || first[1] !== last[1])) {
+                ring.push([first[0], first[1]]);
+              }
+
+              const polygon = new Polygon({
+                rings: [ring],
+                spatialReference: { wkid: 4326 },
+              });
+
+              const graphic = new Graphic({
+                geometry: polygon,
+                symbol: {
+                  type: "simple-fill",
+                  color: hexToRgba(loc.fill || "#2f6f9e", loc.opacity ?? 35),
+                  outline: {
+                    color: loc.outline || "#05538c",
+                    width: 2,
+                  },
+                },
+                attributes: {
+                  name: loc.name || `Location ${i + 1}`,
+                },
+              });
+
+              graphics.push(graphic);
+            });
+
+            view.graphics.addMany(graphics);
+
+            // Fit view to all polygons
+            try {
+              const extents = graphics
+                .map((g) => g.geometry && g.geometry.extent)
+                .filter(Boolean);
+              const fullExtent = Extent.union(extents);
+              await view.goTo({ target: fullExtent.expand(1.2) }, { duration: 700 });
+            } catch (e) {
+              // If union fails, fallback
+              try {
+                await view.goTo(graphics.map((g) => g.geometry), { padding: 60 });
+              } catch (_) {}
+            }
+
+            setMsg(msgEl.textContent + "\n✅ Map rendered.");
+          });
+        }
+      );
+    </script>
+  </body>
+</html>
