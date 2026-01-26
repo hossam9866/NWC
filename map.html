@@ -12,49 +12,27 @@
     html, body { height: 100%; margin: 0; }
     #viewDiv { height: 100%; width: 100%; }
 
-    #status {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      z-index: 10;
-      background: rgba(0,0,0,.75);
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      max-width: 360px;
-      white-space: pre-wrap;
-      pointer-events: none;
+    #status{
+      position:absolute;top:12px;left:12px;z-index:10;
+      background:rgba(0,0,0,.75);color:#fff;padding:10px 14px;border-radius:10px;
+      font-family:Arial,sans-serif;font-size:13px;max-width:360px;white-space:pre-wrap;
+      pointer-events:none;
     }
 
-    /* ✅ Buttons bar */
-    #controls {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      z-index: 11;
-      display: none;
-      gap: 8px;
-      flex-wrap: wrap;
-      max-width: min(520px, calc(100vw - 24px));
-      justify-content: flex-end;
+    #controls{
+      position:absolute;top:12px;right:12px;z-index:11;
+      display:none;gap:8px;flex-wrap:wrap;
+      max-width:min(520px, calc(100vw - 24px));
+      justify-content:flex-end;
     }
-
-    #controls button {
-      pointer-events: auto;
-      cursor: pointer;
-      border: 0;
-      border-radius: 999px;
-      padding: 8px 12px;
-      font: 13px Arial, sans-serif;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.65);
-      transition: transform .12s ease, background .12s ease;
+    #controls button{
+      pointer-events:auto;cursor:pointer;border:0;border-radius:999px;
+      padding:8px 12px;font:13px Arial,sans-serif;color:#fff;
+      background:rgba(0,0,0,.65);transition:transform .12s ease, background .12s ease;
     }
-    #controls button:hover { background: rgba(0, 0, 0, 0.8); transform: translateY(-1px); }
-    #controls button:active { transform: translateY(0px); }
-    #controls button.primary { background: rgba(44, 62, 80, 0.9); }
+    #controls button:hover{ background:rgba(0,0,0,.82); transform:translateY(-1px); }
+    #controls button:active{ transform:translateY(0); }
+    #controls button.primary{ background:rgba(44,62,80,.92); }
   </style>
 
   <!-- ArcGIS JS -->
@@ -82,7 +60,7 @@
 
       const raw = match[1];
 
-      // Try normal JSON (already decoded)
+      // Try JSON (already decoded)
       try { return JSON.parse(raw); } catch (_) {}
 
       // Try decoded JSON
@@ -91,108 +69,159 @@
       return [];
     }
 
+    // Optional params
+    const sp = new URLSearchParams(location.search);
+    const basemap = sp.get("basemap") || "streets-vector";
+    const zoom = Number(sp.get("zoom") || "6");
+    const centerStr = sp.get("center");
+    const center = centerStr ? centerStr.split(",").map(x => Number(x)) : [47, 25];
+
     const locations = readLocationsFromUrl();
-    const validLocations = Array.isArray(locations)
-      ? locations.filter(l => l && Array.isArray(l.points) && l.points.length >= 3)
+    const total = Array.isArray(locations) ? locations.length : 0;
+
+    // Keep polygon OR circle (do NOT filter circle out)
+    const validItems = Array.isArray(locations)
+      ? locations.filter(l =>
+          l &&
+          (
+            (Array.isArray(l.points) && l.points.length >= 3) ||
+            (l.latitude != null && l.longitude != null && l.radius != null)
+          )
+        )
       : [];
 
     setStatus(
-      `Locations received: ${Array.isArray(locations) ? locations.length : 0}\nValid polygons: ${validLocations.length}`
+      `basemap: ${basemap}\nzoom: ${zoom}\ncenter: ${center.join(",")}\nitems: ${validItems.length}/${total}`
     );
 
-    if (!validLocations.length) {
-      setStatus(statusEl.textContent + "\n❌ No valid locations.");
+    if (!validItems.length) {
+      setStatus(statusEl.textContent + "\n\n❌ No valid locations (polygon/circle).");
       throw new Error("No valid locations");
     }
 
     // ============================
-    // ArcGIS Map
+    // ArcGIS Map (Polygon + Circle)
     // ============================
     require([
       "esri/Map",
       "esri/views/MapView",
       "esri/Graphic",
       "esri/geometry/Polygon",
+      "esri/geometry/Circle",
       "esri/geometry/Extent"
-    ], function (Map, MapView, Graphic, Polygon, Extent) {
+    ], function (Map, MapView, Graphic, Polygon, Circle, Extent) {
 
       function hexToRgba(hex, opacity = 35) {
         let h = String(hex || "#2f6f9e").replace("#", "");
         if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
-        const r = parseInt(h.slice(0,2),16);
-        const g = parseInt(h.slice(2,4),16);
-        const b = parseInt(h.slice(4,6),16);
+        const r = parseInt(h.substring(0, 2) || "00", 16);
+        const g = parseInt(h.substring(2, 4) || "00", 16);
+        const b = parseInt(h.substring(4, 6) || "00", 16);
         const a = Math.max(0, Math.min(1, (Number(opacity) || 35) / 100));
         return `rgba(${r},${g},${b},${a})`;
       }
 
-      const map = new Map({ basemap: "streets-vector" });
+      function buildGeometry(item) {
+        // ✅ Polygon
+        if (Array.isArray(item.points) && item.points.length >= 3) {
+          const ring = item.points.map(p => [Number(p[0]), Number(p[1])]);
+
+          // close ring
+          const first = ring[0];
+          const last  = ring[ring.length - 1];
+          if (first && last && (first[0] !== last[0] || first[1] !== last[1])) {
+            ring.push([first[0], first[1]]);
+          }
+
+          return new Polygon({
+            rings: [ring],
+            spatialReference: { wkid: 4326 }
+          });
+        }
+
+        // ✅ Circle (radius in meters)
+        if (item.latitude != null && item.longitude != null && item.radius != null) {
+          return new Circle({
+            center: [Number(item.longitude), Number(item.latitude)],
+            radius: Number(item.radius),
+            radiusUnit: "meters"
+          });
+        }
+
+        return null;
+      }
+
+      const map = new Map({ basemap });
 
       const view = new MapView({
         container: "viewDiv",
         map,
-        zoom: 6,
-        center: [47, 25]
+        zoom: Number.isFinite(zoom) ? zoom : 6,
+        center: (Array.isArray(center) && center.length === 2) ? center : [47, 25]
       });
 
       view.when(async () => {
         const items = [];
 
-        // Build graphics + keep pairing (location <-> graphic)
-        validLocations.forEach((loc, i) => {
-          const ring = loc.points.map(p => [Number(p[0]), Number(p[1])]);
+        validItems.forEach((loc, i) => {
+          const geom = buildGeometry(loc);
+          if (!geom) return;
 
-          // close polygon
-          const f = ring[0], l = ring[ring.length - 1];
-          if (f && l && (f[0] !== l[0] || f[1] !== l[1])) ring.push([f[0], f[1]]);
-
-          const polygon = new Polygon({
-            rings: [ring],
-            spatialReference: { wkid: 4326 }
-          });
-
+          // Circle can use simple-fill (it becomes a polygon shape)
           const graphic = new Graphic({
-            geometry: polygon,
+            geometry: geom,
             symbol: {
               type: "simple-fill",
-              color: hexToRgba(loc.fill, loc.opacity),
-              outline: { color: loc.outline || "#05538c", width: 2 }
+              color: hexToRgba(loc.fill || "#2f6f9e", loc.opacity ?? 35),
+              outline: {
+                color: loc.outline || "#05538c",
+                width: 2
+              }
             },
-            attributes: { name: loc.name || `Location ${i+1}` }
+            attributes: {
+              name: loc.name || `Location ${i + 1}`
+            }
           });
 
           items.push({ loc, graphic });
         });
 
+        if (!items.length) {
+          setStatus(statusEl.textContent + "\n\n❌ All items invalid after buildGeometry().");
+          return;
+        }
+
         const graphics = items.map(x => x.graphic);
         view.graphics.addMany(graphics);
 
-        // Fit all at start
         async function goToAll() {
           try {
-            const extents = graphics.map(g => g.geometry.extent).filter(Boolean);
+            const extents = graphics
+              .map(g => g.geometry && g.geometry.extent)
+              .filter(Boolean);
             const full = Extent.union(extents);
             await view.goTo({ target: full.expand(1.2) }, { duration: 650 });
           } catch (e) {
-            try { await view.goTo(graphics.map(g => g.geometry), { padding: 60 }); } catch (_) {}
+            try {
+              await view.goTo(graphics.map(g => g.geometry), { padding: 60 });
+            } catch (_) {}
           }
         }
 
         await goToAll();
-        setStatus(statusEl.textContent + "\n✅ Map rendered.");
+        setStatus(statusEl.textContent + "\n✅ Map rendered (polygons + circles).");
 
-        // ✅ Buttons only if more than 1
+        // ✅ Buttons
         if (items.length > 1) {
           controlsEl.style.display = "flex";
+          controlsEl.innerHTML = "";
 
-          // Show All
           const btnAll = document.createElement("button");
           btnAll.className = "primary";
           btnAll.textContent = "Show All";
           btnAll.onclick = () => goToAll();
           controlsEl.appendChild(btnAll);
 
-          // Per location button
           items.forEach((item, idx) => {
             const btn = document.createElement("button");
             btn.textContent = item.loc.name || `Location ${idx + 1}`;
@@ -200,10 +229,10 @@
 
             btn.onclick = async () => {
               try {
-                const ext = item.graphic.geometry.extent;
+                const ext = item.graphic.geometry && item.graphic.geometry.extent;
                 if (!ext) return;
                 await view.goTo({ target: ext.expand(1.35) }, { duration: 650 });
-                if (view.zoom > 16) view.zoom = 16; // optional cap
+                if (view.zoom > 16) view.zoom = 16;
               } catch (_) {}
             };
 
