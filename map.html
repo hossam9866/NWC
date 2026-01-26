@@ -6,20 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ArcGIS CSS -->
-  <link
-    rel="stylesheet"
-    href="https://js.arcgis.com/4.29/esri/themes/light/main.css"
-  />
+  <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
 
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    #viewDiv {
-      height: 100%;
-      width: 100%;
-    }
+    html, body { height: 100%; margin: 0; }
+    #viewDiv { height: 100%; width: 100%; }
+
     #status {
       position: absolute;
       top: 12px;
@@ -33,7 +25,36 @@
       font-size: 13px;
       max-width: 360px;
       white-space: pre-wrap;
+      pointer-events: none;
     }
+
+    /* ✅ Buttons bar */
+    #controls {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 11;
+      display: none;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: min(520px, calc(100vw - 24px));
+      justify-content: flex-end;
+    }
+
+    #controls button {
+      pointer-events: auto;
+      cursor: pointer;
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font: 13px Arial, sans-serif;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.65);
+      transition: transform .12s ease, background .12s ease;
+    }
+    #controls button:hover { background: rgba(0, 0, 0, 0.8); transform: translateY(-1px); }
+    #controls button:active { transform: translateY(0px); }
+    #controls button.primary { background: rgba(44, 62, 80, 0.9); }
   </style>
 
   <!-- ArcGIS JS -->
@@ -42,14 +63,14 @@
 
 <body>
   <div id="status">Reading locations from URL…</div>
+  <div id="controls"></div>
   <div id="viewDiv"></div>
 
   <script>
     const statusEl = document.getElementById("status");
+    const controlsEl = document.getElementById("controls");
 
-    function setStatus(msg) {
-      statusEl.textContent = msg;
-    }
+    function setStatus(msg) { statusEl.textContent = msg; }
 
     // ============================
     // Read "location" from URL
@@ -57,20 +78,15 @@
     function readLocationsFromUrl() {
       const query = location.search || "";
       const match = query.match(/[?&]location=(.*)$/);
-
       if (!match) return [];
 
-      let raw = match[1];
+      const raw = match[1];
 
       // Try normal JSON (already decoded)
-      try {
-        return JSON.parse(raw);
-      } catch (_) {}
+      try { return JSON.parse(raw); } catch (_) {}
 
       // Try decoded JSON
-      try {
-        return JSON.parse(decodeURIComponent(raw));
-      } catch (_) {}
+      try { return JSON.parse(decodeURIComponent(raw)); } catch (_) {}
 
       return [];
     }
@@ -106,13 +122,11 @@
         const r = parseInt(h.slice(0,2),16);
         const g = parseInt(h.slice(2,4),16);
         const b = parseInt(h.slice(4,6),16);
-        const a = Math.max(0, Math.min(1, opacity / 100));
+        const a = Math.max(0, Math.min(1, (Number(opacity) || 35) / 100));
         return `rgba(${r},${g},${b},${a})`;
       }
 
-      const map = new Map({
-        basemap: "streets-vector"
-      });
+      const map = new Map({ basemap: "streets-vector" });
 
       const view = new MapView({
         container: "viewDiv",
@@ -122,14 +136,15 @@
       });
 
       view.when(async () => {
-        const graphics = [];
+        const items = [];
 
+        // Build graphics + keep pairing (location <-> graphic)
         validLocations.forEach((loc, i) => {
           const ring = loc.points.map(p => [Number(p[0]), Number(p[1])]);
 
           // close polygon
           const f = ring[0], l = ring[ring.length - 1];
-          if (f[0] !== l[0] || f[1] !== l[1]) ring.push([f[0], f[1]]);
+          if (f && l && (f[0] !== l[0] || f[1] !== l[1])) ring.push([f[0], f[1]]);
 
           const polygon = new Polygon({
             rings: [ring],
@@ -141,28 +156,60 @@
             symbol: {
               type: "simple-fill",
               color: hexToRgba(loc.fill, loc.opacity),
-              outline: {
-                color: loc.outline || "#05538c",
-                width: 2
-              }
+              outline: { color: loc.outline || "#05538c", width: 2 }
             },
-            attributes: {
-              name: loc.name || `Location ${i+1}`
-            }
+            attributes: { name: loc.name || `Location ${i+1}` }
           });
 
-          graphics.push(graphic);
+          items.push({ loc, graphic });
         });
 
+        const graphics = items.map(x => x.graphic);
         view.graphics.addMany(graphics);
 
-        try {
-          const extents = graphics.map(g => g.geometry.extent);
-          const full = Extent.union(extents);
-          await view.goTo(full.expand(1.2));
-        } catch (_) {}
+        // Fit all at start
+        async function goToAll() {
+          try {
+            const extents = graphics.map(g => g.geometry.extent).filter(Boolean);
+            const full = Extent.union(extents);
+            await view.goTo({ target: full.expand(1.2) }, { duration: 650 });
+          } catch (e) {
+            try { await view.goTo(graphics.map(g => g.geometry), { padding: 60 }); } catch (_) {}
+          }
+        }
 
+        await goToAll();
         setStatus(statusEl.textContent + "\n✅ Map rendered.");
+
+        // ✅ Buttons only if more than 1
+        if (items.length > 1) {
+          controlsEl.style.display = "flex";
+
+          // Show All
+          const btnAll = document.createElement("button");
+          btnAll.className = "primary";
+          btnAll.textContent = "Show All";
+          btnAll.onclick = () => goToAll();
+          controlsEl.appendChild(btnAll);
+
+          // Per location button
+          items.forEach((item, idx) => {
+            const btn = document.createElement("button");
+            btn.textContent = item.loc.name || `Location ${idx + 1}`;
+            btn.title = "Zoom to " + btn.textContent;
+
+            btn.onclick = async () => {
+              try {
+                const ext = item.graphic.geometry.extent;
+                if (!ext) return;
+                await view.goTo({ target: ext.expand(1.35) }, { duration: 650 });
+                if (view.zoom > 16) view.zoom = 16; // optional cap
+              } catch (_) {}
+            };
+
+            controlsEl.appendChild(btn);
+          });
+        }
       });
     });
   </script>
